@@ -30,7 +30,7 @@ namespace QLVT
             cmbChinhanh.SelectedIndex = 0;
         }
 
-
+        //test git
         private void LayDSPM(String cmd)
         {
             DataTable dt = new DataTable();
