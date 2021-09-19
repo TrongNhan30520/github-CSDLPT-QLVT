@@ -57,7 +57,16 @@ namespace QLVT
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form fm = this.CheckExists(typeof(FormMain));
+            if (fm != null) fm.Close();
+            Form frm = this.CheckExists(typeof(FormDN));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FormDN FrmDN = new FormDN();
+                FrmDN.MdiParent = this;
+                FrmDN.Show();
+            }
         }
 
         private void btnDX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

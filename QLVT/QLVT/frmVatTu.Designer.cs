@@ -30,11 +30,11 @@ namespace QLVT
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label sOLUONGTONLabel;
-            System.Windows.Forms.Label dVTLabel;
-            System.Windows.Forms.Label tENVTLabel;
-            System.Windows.Forms.Label mAVTLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVatTu));
+            System.Windows.Forms.Label mAVTLabel;
+            System.Windows.Forms.Label tENVTLabel;
+            System.Windows.Forms.Label dVTLabel;
+            System.Windows.Forms.Label sOLUONGTONLabel;
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barVT = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -67,14 +67,14 @@ namespace QLVT
             this.colSOLUONGTON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colrowguid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TTVatTu = new DevExpress.XtraEditors.GroupControl();
-            this.numSLT = new System.Windows.Forms.NumericUpDown();
-            this.txtDVT = new System.Windows.Forms.TextBox();
-            this.txtTenVT = new System.Windows.Forms.TextBox();
-            this.txtMaVT = new System.Windows.Forms.TextBox();
-            sOLUONGTONLabel = new System.Windows.Forms.Label();
-            dVTLabel = new System.Windows.Forms.Label();
-            tENVTLabel = new System.Windows.Forms.Label();
+            this.txtMVT = new DevExpress.XtraEditors.TextEdit();
+            this.txtTENVT = new DevExpress.XtraEditors.TextEdit();
+            this.txtDonViTinh = new DevExpress.XtraEditors.TextEdit();
+            this.SpinSLT = new DevExpress.XtraEditors.SpinEdit();
             mAVTLabel = new System.Windows.Forms.Label();
+            tENVTLabel = new System.Windows.Forms.Label();
+            dVTLabel = new System.Windows.Forms.Label();
+            sOLUONGTONLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDSVatTu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
@@ -82,44 +82,11 @@ namespace QLVT
             ((System.ComponentModel.ISupportInitialize)(this.gridViewKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TTVatTu)).BeginInit();
             this.TTVatTu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSLT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMVT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTENVT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonViTinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpinSLT.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // sOLUONGTONLabel
-            // 
-            sOLUONGTONLabel.AutoSize = true;
-            sOLUONGTONLabel.Location = new System.Drawing.Point(486, 101);
-            sOLUONGTONLabel.Name = "sOLUONGTONLabel";
-            sOLUONGTONLabel.Size = new System.Drawing.Size(77, 13);
-            sOLUONGTONLabel.TabIndex = 6;
-            sOLUONGTONLabel.Text = "Số Lượng Tồn:";
-            // 
-            // dVTLabel
-            // 
-            dVTLabel.AutoSize = true;
-            dVTLabel.Location = new System.Drawing.Point(102, 101);
-            dVTLabel.Name = "dVTLabel";
-            dVTLabel.Size = new System.Drawing.Size(63, 13);
-            dVTLabel.TabIndex = 4;
-            dVTLabel.Text = "Đơn vị tính:";
-            // 
-            // tENVTLabel
-            // 
-            tENVTLabel.AutoSize = true;
-            tENVTLabel.Location = new System.Drawing.Point(486, 61);
-            tENVTLabel.Name = "tENVTLabel";
-            tENVTLabel.Size = new System.Drawing.Size(64, 13);
-            tENVTLabel.TabIndex = 2;
-            tENVTLabel.Text = "Tên Vật Tư:";
-            // 
-            // mAVTLabel
-            // 
-            mAVTLabel.AutoSize = true;
-            mAVTLabel.Location = new System.Drawing.Point(102, 62);
-            mAVTLabel.Name = "mAVTLabel";
-            mAVTLabel.Size = new System.Drawing.Size(60, 13);
-            mAVTLabel.TabIndex = 0;
-            mAVTLabel.Text = "Mã Vật Tư:";
             // 
             // barDockControlTop
             // 
@@ -252,7 +219,7 @@ namespace QLVT
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 443);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 471);
             this.barDockControlBottom.Manager = this.barVT;
             this.barDockControlBottom.Size = new System.Drawing.Size(857, 20);
             // 
@@ -262,7 +229,7 @@ namespace QLVT
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
             this.barDockControlLeft.Manager = this.barVT;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 398);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 426);
             // 
             // barDockControlRight
             // 
@@ -270,7 +237,7 @@ namespace QLVT
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(857, 45);
             this.barDockControlRight.Manager = this.barVT;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 398);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 426);
             // 
             // barButtonItem1
             // 
@@ -398,65 +365,104 @@ namespace QLVT
             // 
             this.TTVatTu.AutoSize = true;
             this.TTVatTu.Controls.Add(sOLUONGTONLabel);
-            this.TTVatTu.Controls.Add(this.numSLT);
+            this.TTVatTu.Controls.Add(this.SpinSLT);
             this.TTVatTu.Controls.Add(dVTLabel);
-            this.TTVatTu.Controls.Add(this.txtDVT);
+            this.TTVatTu.Controls.Add(this.txtDonViTinh);
             this.TTVatTu.Controls.Add(tENVTLabel);
-            this.TTVatTu.Controls.Add(this.txtTenVT);
+            this.TTVatTu.Controls.Add(this.txtTENVT);
             this.TTVatTu.Controls.Add(mAVTLabel);
-            this.TTVatTu.Controls.Add(this.txtMaVT);
+            this.TTVatTu.Controls.Add(this.txtMVT);
             this.TTVatTu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TTVatTu.Location = new System.Drawing.Point(0, 313);
             this.TTVatTu.Name = "TTVatTu";
-            this.TTVatTu.Size = new System.Drawing.Size(857, 130);
+            this.TTVatTu.Size = new System.Drawing.Size(857, 158);
             this.TTVatTu.TabIndex = 7;
             this.TTVatTu.Text = "Thông Tin";
             // 
-            // numSLT
+            // mAVTLabel
             // 
-            this.numSLT.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.BDSVatTu, "SOLUONGTON", true));
-            this.numSLT.Location = new System.Drawing.Point(593, 95);
-            this.numSLT.Maximum = new decimal(new int[] {
-            1000,
+            mAVTLabel.AutoSize = true;
+            mAVTLabel.Location = new System.Drawing.Point(96, 70);
+            mAVTLabel.Name = "mAVTLabel";
+            mAVTLabel.Size = new System.Drawing.Size(60, 13);
+            mAVTLabel.TabIndex = 0;
+            mAVTLabel.Text = "Mã Vật Tư:";
+            // 
+            // txtMVT
+            // 
+            this.txtMVT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.BDSVatTu, "MAVT", true));
+            this.txtMVT.Location = new System.Drawing.Point(169, 63);
+            this.txtMVT.MenuManager = this.barVT;
+            this.txtMVT.Name = "txtMVT";
+            this.txtMVT.Size = new System.Drawing.Size(100, 20);
+            this.txtMVT.TabIndex = 1;
+            // 
+            // tENVTLabel
+            // 
+            tENVTLabel.AutoSize = true;
+            tENVTLabel.Location = new System.Drawing.Point(96, 125);
+            tENVTLabel.Name = "tENVTLabel";
+            tENVTLabel.Size = new System.Drawing.Size(42, 13);
+            tENVTLabel.TabIndex = 2;
+            tENVTLabel.Text = "TENVT:";
+            // 
+            // txtTENVT
+            // 
+            this.txtTENVT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.BDSVatTu, "TENVT", true));
+            this.txtTENVT.Location = new System.Drawing.Point(169, 122);
+            this.txtTENVT.MenuManager = this.barVT;
+            this.txtTENVT.Name = "txtTENVT";
+            this.txtTENVT.Size = new System.Drawing.Size(100, 20);
+            this.txtTENVT.TabIndex = 3;
+            // 
+            // dVTLabel
+            // 
+            dVTLabel.AutoSize = true;
+            dVTLabel.Location = new System.Drawing.Point(453, 66);
+            dVTLabel.Name = "dVTLabel";
+            dVTLabel.Size = new System.Drawing.Size(30, 13);
+            dVTLabel.TabIndex = 4;
+            dVTLabel.Text = "DVT:";
+            // 
+            // txtDonViTinh
+            // 
+            this.txtDonViTinh.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.BDSVatTu, "DVT", true));
+            this.txtDonViTinh.Location = new System.Drawing.Point(563, 63);
+            this.txtDonViTinh.MenuManager = this.barVT;
+            this.txtDonViTinh.Name = "txtDonViTinh";
+            this.txtDonViTinh.Size = new System.Drawing.Size(100, 20);
+            this.txtDonViTinh.TabIndex = 5;
+            // 
+            // sOLUONGTONLabel
+            // 
+            sOLUONGTONLabel.AutoSize = true;
+            sOLUONGTONLabel.Location = new System.Drawing.Point(453, 121);
+            sOLUONGTONLabel.Name = "sOLUONGTONLabel";
+            sOLUONGTONLabel.Size = new System.Drawing.Size(80, 13);
+            sOLUONGTONLabel.TabIndex = 6;
+            sOLUONGTONLabel.Text = "SOLUONGTON:";
+            // 
+            // SpinSLT
+            // 
+            this.SpinSLT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.BDSVatTu, "SOLUONGTON", true));
+            this.SpinSLT.EditValue = new decimal(new int[] {
+            0,
             0,
             0,
             0});
-            this.numSLT.Name = "numSLT";
-            this.numSLT.Size = new System.Drawing.Size(124, 21);
-            this.numSLT.TabIndex = 7;
-            // 
-            // txtDVT
-            // 
-            this.txtDVT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BDSVatTu, "DVT", true));
-            this.txtDVT.Location = new System.Drawing.Point(182, 98);
-            this.txtDVT.MaxLength = 15;
-            this.txtDVT.Name = "txtDVT";
-            this.txtDVT.Size = new System.Drawing.Size(120, 21);
-            this.txtDVT.TabIndex = 5;
-            // 
-            // txtTenVT
-            // 
-            this.txtTenVT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BDSVatTu, "TENVT", true));
-            this.txtTenVT.Location = new System.Drawing.Point(593, 54);
-            this.txtTenVT.MaxLength = 30;
-            this.txtTenVT.Name = "txtTenVT";
-            this.txtTenVT.Size = new System.Drawing.Size(124, 21);
-            this.txtTenVT.TabIndex = 3;
-            // 
-            // txtMaVT
-            // 
-            this.txtMaVT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BDSVatTu, "MAVT", true));
-            this.txtMaVT.Location = new System.Drawing.Point(182, 58);
-            this.txtMaVT.MaxLength = 4;
-            this.txtMaVT.Name = "txtMaVT";
-            this.txtMaVT.Size = new System.Drawing.Size(120, 21);
-            this.txtMaVT.TabIndex = 1;
+            this.SpinSLT.Location = new System.Drawing.Point(563, 118);
+            this.SpinSLT.MenuManager = this.barVT;
+            this.SpinSLT.Name = "SpinSLT";
+            this.SpinSLT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SpinSLT.Size = new System.Drawing.Size(100, 20);
+            this.SpinSLT.TabIndex = 7;
             // 
             // frmVatTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 463);
+            this.ClientSize = new System.Drawing.Size(857, 491);
             this.Controls.Add(this.TTVatTu);
             this.Controls.Add(this.GCVatTu);
             this.Controls.Add(this.barDockControlTop);
@@ -476,7 +482,10 @@ namespace QLVT
             ((System.ComponentModel.ISupportInitialize)(this.TTVatTu)).EndInit();
             this.TTVatTu.ResumeLayout(false);
             this.TTVatTu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSLT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMVT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTENVT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonViTinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpinSLT.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,9 +525,9 @@ namespace QLVT
         private DevExpress.XtraGrid.Columns.GridColumn colSOLUONGTON;
         private DevExpress.XtraGrid.Columns.GridColumn colrowguid;
         private DevExpress.XtraEditors.GroupControl TTVatTu;
-        private System.Windows.Forms.NumericUpDown numSLT;
-        private System.Windows.Forms.TextBox txtDVT;
-        private System.Windows.Forms.TextBox txtTenVT;
-        private System.Windows.Forms.TextBox txtMaVT;
+        private DevExpress.XtraEditors.SpinEdit SpinSLT;
+        private DevExpress.XtraEditors.TextEdit txtDonViTinh;
+        private DevExpress.XtraEditors.TextEdit txtTENVT;
+        private DevExpress.XtraEditors.TextEdit txtMVT;
     }
 }

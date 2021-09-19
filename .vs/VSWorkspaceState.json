@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\QLVT",
+    "\\QLVT\\QLVT"
   ],
-  "SelectedNode": "\\QLVT.sln",
+  "SelectedNode": "\\QLVT\\QLVT\\FormDN.cs",
   "PreviewInSolutionExplorer": false
 }

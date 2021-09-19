@@ -52,7 +52,7 @@ namespace QLVT
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.grLapPhieu = new DevExpress.XtraEditors.GroupControl();
-            this.cbbCN = new System.Windows.Forms.ComboBox();
+            this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.DS = new QLVT.QLVT_DATHANGDataSet();
             this.BDSDatHang = new System.Windows.Forms.BindingSource(this.components);
             this.datHangTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.DatHangTableAdapter();
@@ -276,7 +276,7 @@ namespace QLVT
             // grLapPhieu
             // 
             this.grLapPhieu.AutoSize = true;
-            this.grLapPhieu.Controls.Add(this.cbbCN);
+            this.grLapPhieu.Controls.Add(this.cmbChiNhanh);
             this.grLapPhieu.Dock = System.Windows.Forms.DockStyle.Top;
             this.grLapPhieu.Location = new System.Drawing.Point(0, 45);
             this.grLapPhieu.Name = "grLapPhieu";
@@ -284,14 +284,14 @@ namespace QLVT
             this.grLapPhieu.TabIndex = 27;
             this.grLapPhieu.Text = "Chi Nhánh";
             // 
-            // cbbCN
+            // cmbChiNhanh
             // 
-            this.cbbCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbCN.FormattingEnabled = true;
-            this.cbbCN.Location = new System.Drawing.Point(152, 38);
-            this.cbbCN.Name = "cbbCN";
-            this.cbbCN.Size = new System.Drawing.Size(262, 21);
-            this.cbbCN.TabIndex = 0;
+            this.cmbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbChiNhanh.FormattingEnabled = true;
+            this.cmbChiNhanh.Location = new System.Drawing.Point(152, 38);
+            this.cmbChiNhanh.Name = "cmbChiNhanh";
+            this.cmbChiNhanh.Size = new System.Drawing.Size(262, 21);
+            this.cmbChiNhanh.TabIndex = 0;
             // 
             // DS
             // 
@@ -484,7 +484,7 @@ namespace QLVT
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraEditors.GroupControl grLapPhieu;
-        private System.Windows.Forms.ComboBox cbbCN;
+        private System.Windows.Forms.ComboBox cmbChiNhanh;
         private System.Windows.Forms.BindingSource BDSDatHang;
         private QLVT_DATHANGDataSet DS;
         private QLVT_DATHANGDataSetTableAdapters.DatHangTableAdapter datHangTableAdapter;

@@ -30,10 +30,10 @@ namespace QLVT
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label KhoLabel;
-            System.Windows.Forms.Label MaKhoLabel;
-            System.Windows.Forms.Label tENVTLabel;
-            System.Windows.Forms.Label maCNLabel;
+            System.Windows.Forms.Label mACNLabel;
+            System.Windows.Forms.Label mAKHOLabel;
+            System.Windows.Forms.Label tENKHOLabel;
+            System.Windows.Forms.Label dIACHILabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKho));
             this.barKho = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -59,12 +59,12 @@ namespace QLVT
             this.khoTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.KhoTableAdapter();
             this.tableAdapterManager = new QLVT.QLVT_DATHANGDataSetTableAdapters.TableAdapterManager();
             this.GRTTKho = new DevExpress.XtraEditors.GroupControl();
-            this.txtTenKho = new System.Windows.Forms.TextBox();
-            this.txtMaKho = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtMaCN = new System.Windows.Forms.TextBox();
+            this.txtDC = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenKho = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaKho = new DevExpress.XtraEditors.TextEdit();
+            this.txtMACN = new DevExpress.XtraEditors.TextEdit();
             this.grChiNhanhKho = new DevExpress.XtraEditors.GroupControl();
-            this.cbbCN = new System.Windows.Forms.ComboBox();
+            this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
             this.GCKho = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,15 +74,19 @@ namespace QLVT
             this.colTENKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.viewDataSource1 = new DevExpress.Persistent.Base.ReportsV2.ViewDataSource();
             this.viewDataSource2 = new DevExpress.Persistent.Base.ReportsV2.ViewDataSource();
-            KhoLabel = new System.Windows.Forms.Label();
-            MaKhoLabel = new System.Windows.Forms.Label();
-            tENVTLabel = new System.Windows.Forms.Label();
-            maCNLabel = new System.Windows.Forms.Label();
+            mACNLabel = new System.Windows.Forms.Label();
+            mAKHOLabel = new System.Windows.Forms.Label();
+            tENKHOLabel = new System.Windows.Forms.Label();
+            dIACHILabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDSKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRTTKho)).BeginInit();
             this.GRTTKho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenKho.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaKho.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMACN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grChiNhanhKho)).BeginInit();
             this.grChiNhanhKho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GCKho)).BeginInit();
@@ -91,41 +95,41 @@ namespace QLVT
             ((System.ComponentModel.ISupportInitialize)(this.viewDataSource2)).BeginInit();
             this.SuspendLayout();
             // 
-            // KhoLabel
+            // mACNLabel
             // 
-            KhoLabel.AutoSize = true;
-            KhoLabel.Location = new System.Drawing.Point(486, 101);
-            KhoLabel.Name = "KhoLabel";
-            KhoLabel.Size = new System.Drawing.Size(50, 13);
-            KhoLabel.TabIndex = 6;
-            KhoLabel.Text = "Tên Kho:";
+            mACNLabel.AutoSize = true;
+            mACNLabel.Location = new System.Drawing.Point(48, 35);
+            mACNLabel.Name = "mACNLabel";
+            mACNLabel.Size = new System.Drawing.Size(40, 13);
+            mACNLabel.TabIndex = 3;
+            mACNLabel.Text = "MACN:";
             // 
-            // MaKhoLabel
+            // mAKHOLabel
             // 
-            MaKhoLabel.AutoSize = true;
-            MaKhoLabel.Location = new System.Drawing.Point(102, 101);
-            MaKhoLabel.Name = "MaKhoLabel";
-            MaKhoLabel.Size = new System.Drawing.Size(46, 13);
-            MaKhoLabel.TabIndex = 4;
-            MaKhoLabel.Text = "Mã Kho:";
+            mAKHOLabel.AutoSize = true;
+            mAKHOLabel.Location = new System.Drawing.Point(48, 95);
+            mAKHOLabel.Name = "mAKHOLabel";
+            mAKHOLabel.Size = new System.Drawing.Size(47, 13);
+            mAKHOLabel.TabIndex = 4;
+            mAKHOLabel.Text = "MAKHO:";
             // 
-            // tENVTLabel
+            // tENKHOLabel
             // 
-            tENVTLabel.AutoSize = true;
-            tENVTLabel.Location = new System.Drawing.Point(486, 61);
-            tENVTLabel.Name = "tENVTLabel";
-            tENVTLabel.Size = new System.Drawing.Size(45, 13);
-            tENVTLabel.TabIndex = 2;
-            tENVTLabel.Text = "Địa Chỉ:";
+            tENKHOLabel.AutoSize = true;
+            tENKHOLabel.Location = new System.Drawing.Point(502, 91);
+            tENKHOLabel.Name = "tENKHOLabel";
+            tENKHOLabel.Size = new System.Drawing.Size(51, 13);
+            tENKHOLabel.TabIndex = 6;
+            tENKHOLabel.Text = "TENKHO:";
             // 
-            // maCNLabel
+            // dIACHILabel
             // 
-            maCNLabel.AutoSize = true;
-            maCNLabel.Location = new System.Drawing.Point(102, 62);
-            maCNLabel.Name = "maCNLabel";
-            maCNLabel.Size = new System.Drawing.Size(77, 13);
-            maCNLabel.TabIndex = 0;
-            maCNLabel.Text = "Mã Chi Nhánh:";
+            dIACHILabel.AutoSize = true;
+            dIACHILabel.Location = new System.Drawing.Point(502, 35);
+            dIACHILabel.Name = "dIACHILabel";
+            dIACHILabel.Size = new System.Drawing.Size(47, 13);
+            dIACHILabel.TabIndex = 8;
+            dIACHILabel.Text = "DIACHI:";
             // 
             // barKho
             // 
@@ -244,15 +248,15 @@ namespace QLVT
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.barKho;
-            this.barDockControl1.Size = new System.Drawing.Size(897, 45);
+            this.barDockControl1.Size = new System.Drawing.Size(931, 45);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 513);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 736);
             this.barDockControlBottom.Manager = this.barKho;
-            this.barDockControlBottom.Size = new System.Drawing.Size(897, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(931, 20);
             // 
             // barDockControlLeft
             // 
@@ -260,15 +264,15 @@ namespace QLVT
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
             this.barDockControlLeft.Manager = this.barKho;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 468);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 691);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(897, 45);
+            this.barDockControlRight.Location = new System.Drawing.Point(931, 45);
             this.barDockControlRight.Manager = this.barKho;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 468);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 691);
             // 
             // barButtonItem1
             // 
@@ -338,74 +342,78 @@ namespace QLVT
             // GRTTKho
             // 
             this.GRTTKho.AutoSize = true;
+            this.GRTTKho.Controls.Add(dIACHILabel);
+            this.GRTTKho.Controls.Add(this.txtDC);
+            this.GRTTKho.Controls.Add(tENKHOLabel);
             this.GRTTKho.Controls.Add(this.txtTenKho);
-            this.GRTTKho.Controls.Add(KhoLabel);
-            this.GRTTKho.Controls.Add(MaKhoLabel);
+            this.GRTTKho.Controls.Add(mAKHOLabel);
             this.GRTTKho.Controls.Add(this.txtMaKho);
-            this.GRTTKho.Controls.Add(tENVTLabel);
-            this.GRTTKho.Controls.Add(this.txtDiaChi);
-            this.GRTTKho.Controls.Add(maCNLabel);
-            this.GRTTKho.Controls.Add(this.txtMaCN);
+            this.GRTTKho.Controls.Add(mACNLabel);
+            this.GRTTKho.Controls.Add(this.txtMACN);
             this.GRTTKho.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.GRTTKho.Location = new System.Drawing.Point(0, 366);
+            this.GRTTKho.Location = new System.Drawing.Point(0, 600);
             this.GRTTKho.Name = "GRTTKho";
-            this.GRTTKho.Size = new System.Drawing.Size(897, 147);
+            this.GRTTKho.Size = new System.Drawing.Size(931, 136);
             this.GRTTKho.TabIndex = 8;
             this.GRTTKho.Text = "Thông Tin";
             this.GRTTKho.Paint += new System.Windows.Forms.PaintEventHandler(this.DCLabel_Paint);
             // 
+            // txtDC
+            // 
+            this.txtDC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.BDSKho, "DIACHI", true));
+            this.txtDC.Location = new System.Drawing.Point(600, 32);
+            this.txtDC.MenuManager = this.barKho;
+            this.txtDC.Name = "txtDC";
+            this.txtDC.Size = new System.Drawing.Size(226, 20);
+            this.txtDC.TabIndex = 9;
+            // 
             // txtTenKho
             // 
-            this.txtTenKho.Location = new System.Drawing.Point(593, 98);
-            this.txtTenKho.MaxLength = 30;
+            this.txtTenKho.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.BDSKho, "TENKHO", true));
+            this.txtTenKho.Location = new System.Drawing.Point(600, 88);
+            this.txtTenKho.MenuManager = this.barKho;
             this.txtTenKho.Name = "txtTenKho";
-            this.txtTenKho.Size = new System.Drawing.Size(124, 21);
+            this.txtTenKho.Size = new System.Drawing.Size(226, 20);
             this.txtTenKho.TabIndex = 7;
             // 
             // txtMaKho
             // 
-            this.txtMaKho.Location = new System.Drawing.Point(182, 98);
-            this.txtMaKho.MaxLength = 15;
+            this.txtMaKho.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.BDSKho, "MAKHO", true));
+            this.txtMaKho.Location = new System.Drawing.Point(101, 88);
+            this.txtMaKho.MenuManager = this.barKho;
             this.txtMaKho.Name = "txtMaKho";
-            this.txtMaKho.Size = new System.Drawing.Size(120, 21);
+            this.txtMaKho.Size = new System.Drawing.Size(212, 20);
             this.txtMaKho.TabIndex = 5;
             // 
-            // txtDiaChi
+            // txtMACN
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(593, 54);
-            this.txtDiaChi.MaxLength = 30;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(124, 21);
-            this.txtDiaChi.TabIndex = 3;
-            // 
-            // txtMaCN
-            // 
-            this.txtMaCN.Location = new System.Drawing.Point(182, 58);
-            this.txtMaCN.MaxLength = 4;
-            this.txtMaCN.Name = "txtMaCN";
-            this.txtMaCN.Size = new System.Drawing.Size(120, 21);
-            this.txtMaCN.TabIndex = 1;
+            this.txtMACN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.BDSKho, "MACN", true));
+            this.txtMACN.Location = new System.Drawing.Point(101, 32);
+            this.txtMACN.MenuManager = this.barKho;
+            this.txtMACN.Name = "txtMACN";
+            this.txtMACN.Size = new System.Drawing.Size(212, 20);
+            this.txtMACN.TabIndex = 4;
             // 
             // grChiNhanhKho
             // 
             this.grChiNhanhKho.AutoSize = true;
-            this.grChiNhanhKho.Controls.Add(this.cbbCN);
+            this.grChiNhanhKho.Controls.Add(this.cmbChiNhanh);
             this.grChiNhanhKho.Dock = System.Windows.Forms.DockStyle.Top;
             this.grChiNhanhKho.Location = new System.Drawing.Point(0, 45);
             this.grChiNhanhKho.Name = "grChiNhanhKho";
-            this.grChiNhanhKho.Size = new System.Drawing.Size(897, 87);
+            this.grChiNhanhKho.Size = new System.Drawing.Size(931, 87);
             this.grChiNhanhKho.TabIndex = 26;
             this.grChiNhanhKho.Text = "Chi Nhánh";
             this.grChiNhanhKho.Paint += new System.Windows.Forms.PaintEventHandler(this.grChiNhanh_Paint);
             // 
-            // cbbCN
+            // cmbChiNhanh
             // 
-            this.cbbCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbCN.FormattingEnabled = true;
-            this.cbbCN.Location = new System.Drawing.Point(152, 38);
-            this.cbbCN.Name = "cbbCN";
-            this.cbbCN.Size = new System.Drawing.Size(262, 21);
-            this.cbbCN.TabIndex = 0;
+            this.cmbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbChiNhanh.FormattingEnabled = true;
+            this.cmbChiNhanh.Location = new System.Drawing.Point(152, 38);
+            this.cmbChiNhanh.Name = "cmbChiNhanh";
+            this.cmbChiNhanh.Size = new System.Drawing.Size(262, 21);
+            this.cmbChiNhanh.TabIndex = 0;
             // 
             // GCKho
             // 
@@ -415,7 +423,7 @@ namespace QLVT
             this.GCKho.MainView = this.gridView1;
             this.GCKho.MenuManager = this.barKho;
             this.GCKho.Name = "GCKho";
-            this.GCKho.Size = new System.Drawing.Size(897, 234);
+            this.GCKho.Size = new System.Drawing.Size(931, 468);
             this.GCKho.TabIndex = 31;
             this.GCKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -481,8 +489,9 @@ namespace QLVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(897, 533);
+            this.ClientSize = new System.Drawing.Size(931, 756);
             this.Controls.Add(this.GCKho);
             this.Controls.Add(this.grChiNhanhKho);
             this.Controls.Add(this.GRTTKho);
@@ -500,6 +509,10 @@ namespace QLVT
             ((System.ComponentModel.ISupportInitialize)(this.GRTTKho)).EndInit();
             this.GRTTKho.ResumeLayout(false);
             this.GRTTKho.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenKho.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaKho.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMACN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grChiNhanhKho)).EndInit();
             this.grChiNhanhKho.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GCKho)).EndInit();
@@ -537,12 +550,8 @@ namespace QLVT
         private QLVT_DATHANGDataSetTableAdapters.KhoTableAdapter khoTableAdapter;
         private QLVT_DATHANGDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraEditors.GroupControl GRTTKho;
-        private System.Windows.Forms.TextBox txtMaKho;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtMaCN;
         private DevExpress.XtraEditors.GroupControl grChiNhanhKho;
-        private System.Windows.Forms.ComboBox cbbCN;
-        private System.Windows.Forms.TextBox txtTenKho;
+        private System.Windows.Forms.ComboBox cmbChiNhanh;
         private DevExpress.XtraGrid.GridControl GCKho;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
@@ -552,5 +561,9 @@ namespace QLVT
         private DevExpress.XtraGrid.Columns.GridColumn colTENKHO;
         private DevExpress.Persistent.Base.ReportsV2.ViewDataSource viewDataSource1;
         private DevExpress.Persistent.Base.ReportsV2.ViewDataSource viewDataSource2;
+        private DevExpress.XtraEditors.TextEdit txtDC;
+        private DevExpress.XtraEditors.TextEdit txtTenKho;
+        private DevExpress.XtraEditors.TextEdit txtMaKho;
+        private DevExpress.XtraEditors.TextEdit txtMACN;
     }
 }
