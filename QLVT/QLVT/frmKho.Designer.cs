@@ -68,12 +68,12 @@ namespace QLVT
             this.GCKho = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colrowguid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.viewDataSource1 = new DevExpress.Persistent.Base.ReportsV2.ViewDataSource();
             this.viewDataSource2 = new DevExpress.Persistent.Base.ReportsV2.ViewDataSource();
+            this.btnHieuChinh = new DevExpress.XtraBars.BarButtonItem();
             mACNLabel = new System.Windows.Forms.Label();
             mAKHOLabel = new System.Windows.Forms.Label();
             tENKHOLabel = new System.Windows.Forms.Label();
@@ -432,7 +432,6 @@ namespace QLVT
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMACN,
-            this.colrowguid,
             this.colMAKHO,
             this.colDIACHI,
             this.colTENKHO});
@@ -446,11 +445,6 @@ namespace QLVT
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 0;
-            // 
-            // colrowguid
-            // 
-            this.colrowguid.FieldName = "rowguid";
-            this.colrowguid.Name = "colrowguid";
             // 
             // colMAKHO
             // 
@@ -484,6 +478,13 @@ namespace QLVT
             this.viewDataSource2.Name = "viewDataSource2";
             this.viewDataSource2.ObjectTypeName = null;
             this.viewDataSource2.TopReturnedRecords = 0;
+            // 
+            // btnHieuChinh
+            // 
+            this.btnHieuChinh.Caption = "Hiệu Chỉnh";
+            this.btnHieuChinh.Id = 12;
+            this.btnHieuChinh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHieuChinh.ImageOptions.SvgImage")));
+            this.btnHieuChinh.Name = "btnHieuChinh";
             // 
             // frmKho
             // 
@@ -555,7 +556,6 @@ namespace QLVT
         private DevExpress.XtraGrid.GridControl GCKho;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
-        private DevExpress.XtraGrid.Columns.GridColumn colrowguid;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKHO;
         private DevExpress.XtraGrid.Columns.GridColumn colDIACHI;
         private DevExpress.XtraGrid.Columns.GridColumn colTENKHO;
@@ -565,5 +565,6 @@ namespace QLVT
         private DevExpress.XtraEditors.TextEdit txtTenKho;
         private DevExpress.XtraEditors.TextEdit txtMaKho;
         private DevExpress.XtraEditors.TextEdit txtMACN;
+        private DevExpress.XtraBars.BarButtonItem btnHieuChinh;
     }
 }

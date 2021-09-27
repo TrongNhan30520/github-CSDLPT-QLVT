@@ -23,6 +23,7 @@ namespace QLVT
 
         private void FormDangNhap_Load(object sender, EventArgs e)
         {
+            
             if (KetNoi_CSDLGOC() == 0) return;
            /* LayDSPM("SELECT * From V_DS_PHANMANH WHERE TENSERVER!='ADMIN/NGUYENTRONGNHAN'");*/
             LayDSPM("SELECT * From V_DS_PHANMANH WHERE TENSERVER!='NHATNG\\NHATNG3'");
@@ -99,8 +100,7 @@ namespace QLVT
             Program.mGroup = Program.myReader.GetString(2);
             Program.myReader.Close();
             Program.conn.Close();
-
-            
+            this.Hide();
             Program.frmChinh = new FormMain();
             try
             {
@@ -132,6 +132,10 @@ namespace QLVT
         private void btnDN_keyPress(object sender, KeyPressEventArgs e)
         {
         
+        }
+        private void frm_menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

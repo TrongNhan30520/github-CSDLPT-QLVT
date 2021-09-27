@@ -13,10 +13,12 @@ using System.Windows.Forms;
 namespace QLVT
 {
     
+    
     public partial class frmNhanvien : DevExpress.XtraEditors.XtraForm
     {
       
-        private Int32 ViTri = 0;
+        int vitri = 0;
+         String macn="";
         public frmNhanvien()
         {
             InitializeComponent();
@@ -31,11 +33,6 @@ namespace QLVT
 
 
        
-        
-        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
 
         private void nhanVienBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -82,25 +79,34 @@ namespace QLVT
 
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DS.PhieuXuat' table. You can move, or remove it, as needed.
-            this.phieuXuatTableAdapter.Fill(this.DS.PhieuXuat);
-            // TODO: This line of code loads data into the 'DS.DatHang' table. You can move, or remove it, as needed.
-
-            this.datHangTableAdapter.Fill(this.DS.DatHang);
-            // TODO: This line of code loads data into the 'DS.PhieuNhap' table. You can move, or remove it, as needed.
-        
 
             this.nhanVienTableAdapter.Connection.ConnectionString = Program.constr;
-            // TODO: This line of code loads data into the 'qLVT_DATHANGDataSet.NhanVien' table. You can move, or remove it, as needed.
             this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
-            if (KetNoi_CSDLGOC() == 0) return;
-            /* LayDSPM("SELECT * From V_DS_PHANMANH WHERE TENSERVER!='ADMIN/NGUYENTRONGNHAN'");*/
-            LayDSPM("SELECT * From V_DS_PHANMANH WHERE TENSERVER!='NHATNG\\NHATNG3'");
 
-            cmbChiNhanh.SelectedIndex = 1;
-            cmbChiNhanh.SelectedIndex = 0;
-            grTTNV.Enabled = false;
-            
+            this.phieuXuatTableAdapter.Connection.ConnectionString = Program.constr;
+            this.phieuXuatTableAdapter.Fill(this.DS.PhieuXuat);
+
+            this.datHangTableAdapter.Connection.ConnectionString = Program.constr;
+            this.datHangTableAdapter.Fill(this.DS.DatHang);
+
+            this.phieuNhapTableAdapter.Connection.ConnectionString = Program.constr;
+            this.phieuNhapTableAdapter.Fill(this.DS.PhieuNhap);
+
+            macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
+            cmbChiNhanh.DataSource = Program.bds_dspm;
+            cmbChiNhanh.DisplayMember = "TENCN";
+            cmbChiNhanh.ValueMember = "TENSERVER"; 
+            cmbChiNhanh.SelectedIndex = Program.mchiNhanh;
+            if (Program.mGroup == "CONGTY") {
+                cmbChiNhanh.Enabled = true;
+               btnCCN.Enabled= btnThem.Enabled = btnXoa.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled =btnHieuChinh.Enabled= false;
+            }
+
+            else 
+            { 
+                cmbChiNhanh.Enabled = false;
+                btnThem.Enabled = btnXoa.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled =btnHieuChinh.Enabled= btnTaiLai.Enabled=btnThoat.Enabled= true;
+            }
             
 
 
@@ -139,7 +145,10 @@ namespace QLVT
         {
             
         }
-
+        private void frm_menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
         private void dateTimeNV_ValueChanged(object sender, EventArgs e)
         {
             
@@ -164,5 +173,182 @@ namespace QLVT
         {
 
         }
+
+        private void btnThem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            vitri = bdsNV.Position;
+            grTTNV.Enabled = true;
+            bdsNV.AddNew();
+            txtMACN.Text = macn;
+            DateNV.EditValue = "";
+
+            btnThem.Enabled = btnXoa.Enabled =btnHieuChinh.Enabled= btnTaiLai.Enabled = btnThoat.Enabled =btnCCN.Enabled=false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = true;
+            gcNV.Enabled = false;
+        }
+
+        private void btnPhucHoi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            bdsNV.CancelEdit();
+            if (btnThem.Enabled == false) bdsNV.Position = vitri;
+            gcNV.Enabled = true;
+            grTTNV.Enabled = false;
+            btnThem.Enabled = btnXoa.Enabled = btnTaiLai.Enabled = btnThoat.Enabled =btnHieuChinh.Enabled= btnCCN.Enabled = true;
+            btnGhi.Enabled = btnPhucHoi.Enabled = false;
+        }
+
+        private void btnHieuChinh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            vitri = bdsNV.Position;
+            grTTNV.Enabled = true;
+            btnThem.Enabled = btnXoa.Enabled = btnTaiLai.Enabled = btnThoat.Enabled = btnHieuChinh.Enabled = btnCCN.Enabled = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = true;
+            gcNV.Enabled = false;
+        }
+
+        private void btnTaiLai_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi Reload" + ex.Message, "", MessageBoxButtons.OK);
+                return;
+            }
+        }
+
+        private void btnGhi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (txtMANV.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã nhân viên không được thiếu!", "", MessageBoxButtons.OK);
+                txtMANV.Focus();
+                return;
+            }
+            if (txtHo.Text.Trim() == "")
+            {
+                MessageBox.Show("Họ nhân viên không được thiếu!", "", MessageBoxButtons.OK);
+                txtHo.Focus();
+                return;
+            }
+            if (txtTen.Text.Trim() == "")
+            {
+                MessageBox.Show("Tên nhân viên không được thiếu!", "", MessageBoxButtons.OK);
+                txtTen.Focus();
+                return;
+            }
+            
+            if (DateNV.Text.Trim() == "")
+            {
+                MessageBox.Show("Ngày sinh nhân viên không được thiếu!", "", MessageBoxButtons.OK);
+                DateNV.Focus();
+                return;
+            }
+          /*  if (Luong<4000000)
+            {
+                MessageBox.Show("Số lương nhân viên không hợp lệ!", "", MessageBoxButtons.OK);
+                DateNV.Focus();
+                return;
+            }*/
+            //thiếu sp kiểm tra MANV trên các phân mảnh
+
+
+
+            try
+            {
+                bdsNV.EndEdit();
+                bdsNV.ResetCurrentItem();
+                this.nhanVienTableAdapter.Connection.ConnectionString = Program.constr;
+                this.nhanVienTableAdapter.Update(this.DS.NhanVien);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi ghi nhân viên\n" + ex.Message, "", MessageBoxButtons.OK);
+                return;
+            }
+            gcNV.Enabled=true;
+            btnThem.Enabled = btnXoa.Enabled = btnTaiLai.Enabled = btnThoat.Enabled = btnHieuChinh.Enabled = btnCCN.Enabled = true;
+            btnGhi.Enabled = btnPhucHoi.Enabled = false;
+            grTTNV.Enabled = false;     
+
+        }
+
+        private void btnXoa_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Int32 Manv = 0;
+            if(BDSDH.Count>0)
+            {
+                MessageBox.Show("Không thể xóa nhân viên này vì đã lập đơn đặt hàng ", "", MessageBoxButtons.OK);
+                return;
+            }
+            if(BDSPN.Count>0)
+            {
+                MessageBox.Show("Không thể xóa nhân viên này vì đã lập phiếu nhập ", "", MessageBoxButtons.OK);
+                return;
+            }
+            if (BDSPX.Count > 0)
+            {
+                MessageBox.Show("Không thể xóa nhân viên này vì đã lập phiếu xuất ", "", MessageBoxButtons.OK);
+                return;
+            }
+            if(MessageBox.Show("Bạn có thực sự muốn xóa nhân viên này không?","Xác Nhận", MessageBoxButtons.OKCancel) == DialogResult.OK){
+                try
+                {
+                    Manv = int.Parse(((DataRowView)bdsNV[bdsNV.Position])["MANV"].ToString());
+                    bdsNV.RemoveCurrent();
+                    this.nhanVienTableAdapter.Connection.ConnectionString = Program.constr;
+                    this.nhanVienTableAdapter.Update(this.DS.NhanVien);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Lỗi xóa nhân viên.Bạn hãy xóa lại\n" + ex.Message, "", MessageBoxButtons.OK);
+                    this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
+                    bdsNV.Position = bdsNV.Find("MANV", Manv);
+                    return;
+                }
+            }
+            if (bdsNV.Count == 0) btnXoa.Enabled = false;
+
+        }
+
+        private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView") 
+                return;
+            Program.servername = cmbChiNhanh.SelectedValue.ToString();
+            if(cmbChiNhanh.SelectedIndex !=Program.mchiNhanh)
+            {
+                Program.mlogin = Program.remotelogin;
+                Program.password = Program.remotepassword;
+            }
+            else
+            {
+                Program.mlogin = Program.mloginDN;
+                Program.password = Program.passwordDN;
+            }
+            if(Program.KetNoi()==0)
+            {
+                MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                this.nhanVienTableAdapter.Connection.ConnectionString = Program.constr;
+                this.nhanVienTableAdapter.Fill(this.DS.NhanVien);
+
+                this.phieuXuatTableAdapter.Connection.ConnectionString = Program.constr;
+                this.phieuXuatTableAdapter.Fill(this.DS.PhieuXuat);
+
+                this.datHangTableAdapter.Connection.ConnectionString = Program.constr;
+                this.datHangTableAdapter.Fill(this.DS.DatHang);
+
+                this.phieuNhapTableAdapter.Connection.ConnectionString = Program.constr;
+                this.phieuNhapTableAdapter.Fill(this.DS.PhieuNhap);
+                macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
+
+            }
+        }
     }
-}
+    }
