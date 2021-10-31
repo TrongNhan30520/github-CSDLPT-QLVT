@@ -31,16 +31,16 @@ namespace QLVT
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label mANVLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanvien));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode7 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode8 = new DevExpress.XtraGrid.GridLevelNode();
             System.Windows.Forms.Label trangThaiXoaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanvien));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode9 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode10 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode11 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode12 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode13 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode14 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode15 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode16 = new DevExpress.XtraGrid.GridLevelNode();
             this.hOLabel = new System.Windows.Forms.Label();
             this.tENLabel = new System.Windows.Forms.Label();
             this.dIACHILabel = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@ namespace QLVT
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.DS = new QLVT.QLVT_DATHANGDataSet();
+            this.dS = new QLVT.QLVT_DATHANGDataSet();
             this.bdsNV = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVienTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.NhanVienTableAdapter();
             this.tableAdapterManager = new QLVT.QLVT_DATHANGDataSetTableAdapters.TableAdapterManager();
@@ -88,6 +88,7 @@ namespace QLVT
             this.BDSPX = new System.Windows.Forms.BindingSource(this.components);
             this.phieuXuatTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.PhieuXuatTableAdapter();
             this.grTTNV = new DevExpress.XtraEditors.GroupControl();
+            this.trangThaiXoaCheckBox = new System.Windows.Forms.CheckBox();
             this.txtMANV = new System.Windows.Forms.TextBox();
             this.txtMACN = new DevExpress.XtraEditors.TextEdit();
             this.SpinLuong = new DevExpress.XtraEditors.SpinEdit();
@@ -97,12 +98,16 @@ namespace QLVT
             this.txtHo = new DevExpress.XtraEditors.TextEdit();
             this.BDSPN = new System.Windows.Forms.BindingSource(this.components);
             this.phieuNhapTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.PhieuNhapTableAdapter();
-            this.trangThaiXoaCheckBox = new System.Windows.Forms.CheckBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.chiNhanhTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.ChiNhanhTableAdapter();
+            this.khoTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.KhoTableAdapter();
+            this.cTPNTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.CTPNTableAdapter();
+            this.cTDDHTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.CTDDHTableAdapter();
+            this.BDSCTDDH = new System.Windows.Forms.BindingSource(this.components);
             mANVLabel = new System.Windows.Forms.Label();
             trangThaiXoaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barQL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grChiNhanh)).BeginInit();
             this.grChiNhanh.SuspendLayout();
@@ -120,6 +125,7 @@ namespace QLVT
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDSPN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDSCTDDH)).BeginInit();
             this.SuspendLayout();
             // 
             // mANVLabel
@@ -130,6 +136,15 @@ namespace QLVT
             mANVLabel.Size = new System.Drawing.Size(39, 13);
             mANVLabel.TabIndex = 37;
             mANVLabel.Text = "MANV:";
+            // 
+            // trangThaiXoaLabel
+            // 
+            trangThaiXoaLabel.AutoSize = true;
+            trangThaiXoaLabel.Location = new System.Drawing.Point(754, 131);
+            trangThaiXoaLabel.Name = "trangThaiXoaLabel";
+            trangThaiXoaLabel.Size = new System.Drawing.Size(83, 13);
+            trangThaiXoaLabel.TabIndex = 38;
+            trangThaiXoaLabel.Text = "Trang Thai Xoa:";
             // 
             // hOLabel
             // 
@@ -287,15 +302,16 @@ namespace QLVT
             // 
             this.btnCCN.Caption = "Chuyển Chi Nhánh";
             this.btnCCN.Id = 10;
+            this.btnCCN.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCCN.ImageOptions.SvgImage")));
             this.btnCCN.Name = "btnCCN";
-            this.btnCCN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            this.btnCCN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCCN_ItemClick);
             // 
             // btnThoat
             // 
             this.btnThoat.Caption = "Thoát";
             this.btnThoat.Id = 11;
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // bar2
             // 
@@ -380,16 +396,18 @@ namespace QLVT
             this.barButtonItem2.Id = 9;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // DS
+            // dS
             // 
-            this.DS.DataSetName = "DS";
-            this.DS.EnforceConstraints = false;
-            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dS.DataSetName = "DS";
+            this.dS.EnforceConstraints = false;
+            this.dS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bdsNV
             // 
+            this.bdsNV.AllowNew = true;
             this.bdsNV.DataMember = "NhanVien";
-            this.bdsNV.DataSource = this.DS;
+            this.bdsNV.DataSource = this.dS;
+            this.bdsNV.CurrentChanged += new System.EventHandler(this.bdsNV_CurrentChanged);
             // 
             // nhanVienTableAdapter
             // 
@@ -436,27 +454,27 @@ namespace QLVT
             // 
             this.gcNV.DataSource = this.bdsNV;
             this.gcNV.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode2.RelationName = "FK_CTDDH_DatHang";
-            gridLevelNode4.RelationName = "FK_CTPN_PhieuNhap";
-            gridLevelNode3.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
-            gridLevelNode3.RelationName = "FK_PhieuNhap_DatHang";
-            gridLevelNode1.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2,
-            gridLevelNode3});
-            gridLevelNode1.RelationName = "FK_DatHang_NhanVien";
-            gridLevelNode6.RelationName = "FK_CTPN_PhieuNhap";
-            gridLevelNode5.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode6});
-            gridLevelNode5.RelationName = "FK_PhieuNhap_NhanVien";
-            gridLevelNode8.RelationName = "FK_CTPX_PX";
-            gridLevelNode7.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode8});
-            gridLevelNode7.RelationName = "FK_PX_NhanVien";
+            gridLevelNode10.RelationName = "FK_CTDDH_DatHang";
+            gridLevelNode12.RelationName = "FK_CTPN_PhieuNhap";
+            gridLevelNode11.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode12});
+            gridLevelNode11.RelationName = "FK_PhieuNhap_DatHang";
+            gridLevelNode9.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode10,
+            gridLevelNode11});
+            gridLevelNode9.RelationName = "FK_DatHang_NhanVien";
+            gridLevelNode14.RelationName = "FK_CTPN_PhieuNhap";
+            gridLevelNode13.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode14});
+            gridLevelNode13.RelationName = "FK_PhieuNhap_NhanVien";
+            gridLevelNode16.RelationName = "FK_CTPX_PX";
+            gridLevelNode15.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode16});
+            gridLevelNode15.RelationName = "FK_PX_NhanVien";
             this.gcNV.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1,
-            gridLevelNode5,
-            gridLevelNode7});
+            gridLevelNode9,
+            gridLevelNode13,
+            gridLevelNode15});
             this.gcNV.Location = new System.Drawing.Point(0, 132);
             this.gcNV.MainView = this.gridViewNV;
             this.gcNV.MenuManager = this.barQL;
@@ -542,8 +560,9 @@ namespace QLVT
             // 
             // BDSDH
             // 
-            this.BDSDH.DataMember = "DatHang";
-            this.BDSDH.DataSource = this.DS;
+            this.BDSDH.AllowNew = true;
+            this.BDSDH.DataMember = "FK_DatHang_NhanVien";
+            this.BDSDH.DataSource = this.bdsNV;
             // 
             // datHangTableAdapter
             // 
@@ -551,8 +570,9 @@ namespace QLVT
             // 
             // BDSPX
             // 
-            this.BDSPX.DataMember = "PhieuXuat";
-            this.BDSPX.DataSource = this.DS;
+            this.BDSPX.AllowNew = false;
+            this.BDSPX.DataMember = "FK_PX_NhanVien";
+            this.BDSPX.DataSource = this.bdsNV;
             // 
             // phieuXuatTableAdapter
             // 
@@ -584,6 +604,15 @@ namespace QLVT
             this.grTTNV.TabIndex = 27;
             this.grTTNV.Text = "Thông Tin";
             this.grTTNV.Paint += new System.Windows.Forms.PaintEventHandler(this.grTTNV_Paint);
+            // 
+            // trangThaiXoaCheckBox
+            // 
+            this.trangThaiXoaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsNV, "TrangThaiXoa", true));
+            this.trangThaiXoaCheckBox.Location = new System.Drawing.Point(843, 127);
+            this.trangThaiXoaCheckBox.Name = "trangThaiXoaCheckBox";
+            this.trangThaiXoaCheckBox.Size = new System.Drawing.Size(104, 21);
+            this.trangThaiXoaCheckBox.TabIndex = 39;
+            this.trangThaiXoaCheckBox.UseVisualStyleBackColor = true;
             // 
             // txtMANV
             // 
@@ -665,35 +694,40 @@ namespace QLVT
             // 
             // BDSPN
             // 
-            this.BDSPN.DataMember = "PhieuNhap";
-            this.BDSPN.DataSource = this.DS;
+            this.BDSPN.AllowNew = false;
+            this.BDSPN.DataMember = "FK_PhieuNhap_NhanVien";
+            this.BDSPN.DataSource = this.bdsNV;
             // 
             // phieuNhapTableAdapter
             // 
             this.phieuNhapTableAdapter.ClearBeforeFill = true;
             // 
-            // trangThaiXoaLabel
-            // 
-            trangThaiXoaLabel.AutoSize = true;
-            trangThaiXoaLabel.Location = new System.Drawing.Point(754, 131);
-            trangThaiXoaLabel.Name = "trangThaiXoaLabel";
-            trangThaiXoaLabel.Size = new System.Drawing.Size(83, 13);
-            trangThaiXoaLabel.TabIndex = 38;
-            trangThaiXoaLabel.Text = "Trang Thai Xoa:";
-            // 
-            // trangThaiXoaCheckBox
-            // 
-            this.trangThaiXoaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsNV, "TrangThaiXoa", true));
-            this.trangThaiXoaCheckBox.Location = new System.Drawing.Point(843, 127);
-            this.trangThaiXoaCheckBox.Name = "trangThaiXoaCheckBox";
-            this.trangThaiXoaCheckBox.Size = new System.Drawing.Size(104, 21);
-            this.trangThaiXoaCheckBox.TabIndex = 39;
-            this.trangThaiXoaCheckBox.UseVisualStyleBackColor = true;
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
+            // 
+            // chiNhanhTableAdapter
+            // 
+            this.chiNhanhTableAdapter.ClearBeforeFill = true;
+            // 
+            // khoTableAdapter
+            // 
+            this.khoTableAdapter.ClearBeforeFill = true;
+            // 
+            // cTPNTableAdapter
+            // 
+            this.cTPNTableAdapter.ClearBeforeFill = true;
+            // 
+            // cTDDHTableAdapter
+            // 
+            this.cTDDHTableAdapter.ClearBeforeFill = true;
+            // 
+            // BDSCTDDH
+            // 
+            this.BDSCTDDH.AllowNew = true;
+            this.BDSCTDDH.DataMember = "FK_CTDDH_DatHang";
+            this.BDSCTDDH.DataSource = this.BDSDH;
             // 
             // frmNhanvien
             // 
@@ -713,7 +747,7 @@ namespace QLVT
             this.Text = "Nhân viên";
             this.Load += new System.EventHandler(this.frmNhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barQL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grChiNhanh)).EndInit();
             this.grChiNhanh.ResumeLayout(false);
@@ -732,6 +766,7 @@ namespace QLVT
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDSPN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDSCTDDH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -757,7 +792,7 @@ namespace QLVT
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private System.Windows.Forms.BindingSource bdsNV;
-        private QLVT_DATHANGDataSet DS;
+        private QLVT_DATHANGDataSet dS;
         private QLVT_DATHANGDataSetTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
         private QLVT_DATHANGDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraGrid.GridControl gcNV;
@@ -797,5 +832,10 @@ namespace QLVT
         private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
         private System.Windows.Forms.CheckBox trangThaiXoaCheckBox;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private QLVT_DATHANGDataSetTableAdapters.ChiNhanhTableAdapter chiNhanhTableAdapter;
+        private QLVT_DATHANGDataSetTableAdapters.KhoTableAdapter khoTableAdapter;
+        private QLVT_DATHANGDataSetTableAdapters.CTPNTableAdapter cTPNTableAdapter;
+        private QLVT_DATHANGDataSetTableAdapters.CTDDHTableAdapter cTDDHTableAdapter;
+        private System.Windows.Forms.BindingSource BDSCTDDH;
     }
 }
