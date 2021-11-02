@@ -9,6 +9,8 @@
 //------------------------------------------------------------------------------
 
 
+using System.Drawing;
+
 namespace QLVT.Properties
 {
     /// <summary>
@@ -23,7 +25,9 @@ namespace QLVT.Properties
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources
     {
-
+        internal static Image dathang1;
+        internal static Image import2;
+        internal static Image export;
         private static global::System.Resources.ResourceManager resourceMan;
 
         private static global::System.Globalization.CultureInfo resourceCulture;

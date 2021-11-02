@@ -113,14 +113,16 @@ namespace QLVT
 
         private void btnLapPhieu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = this.CheckExists(typeof(frmLapPhieu));
+            Form frm = this.CheckExists(typeof(FormLapPhieu));
             if (frm != null) frm.Activate();
             else
             {
-                frmLapPhieu fLapPhieu = new frmLapPhieu();
-                fLapPhieu.MdiParent = this;
-                fLapPhieu.Show();
+                Program.formLapPhieu  = new FormLapPhieu();
+                Program.formLapPhieu.MdiParent = this;
+                Program.formLapPhieu.Show();
+                Program.formLapPhieu.btnSwitch.Links[0].Caption = "Đặt Hàng";
             }
         }
+
     }
 }

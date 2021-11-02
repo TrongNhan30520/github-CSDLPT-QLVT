@@ -1,11 +1,13 @@
 ﻿using DevExpress.Skins;
 using DevExpress.UserSkins;
+using QLVT.SubForm;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+
 
 namespace QLVT
 {
@@ -16,8 +18,8 @@ namespace QLVT
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String constr;
-        /*public static String constr_publisher = "Data Source=ADMIN\\NGUYENTRONGNHAN; Initial Catalog=QLVT ; Integrated Security=True";*/
-        public static String constr_publisher = "Data Source=NHATNG; Initial Catalog=QLVT_DATHANG ; Integrated Security=True";
+        public static String constr_publisher = "Data Source=ADMIN\\NGUYENTRONGNHAN;Initial Catalog=QLVT;Integrated Security=True";
+        /*public static String constr_publisher = "Data Source=NHATNG; Initial Catalog=QLVT_DATHANG ; Integrated Security=True";*/
 
         public static SqlDataReader myReader;
         public static String servername ="";
@@ -25,19 +27,26 @@ namespace QLVT
         public static String mlogin ="";
         public static String password ="";
 
-        public static String database = "QLVT_DATHANG";
+        public static String database = "QLVT";
         public static String remotelogin = "HTKN";
-        public static String remotepassword = "123";
+        public static String remotepassword = "12345";
         public static String mloginDN ="";
         public static String passwordDN ="";
         public static String mGroup ="";
         public static String mHoten ="";
+        public static int maNV = 0;
         public static int mchiNhanh = 0;
 
 
         public static BindingSource bds_dspm = new BindingSource();
-        public static FormMain frmChinh;
 
+
+        public static FormMain frmChinh;
+        public static FormLapPhieu formLapPhieu;
+        public static SubFormCTDDH subFormCTDDH;
+        public static SubFormCTPX subFormCTPX;
+        public static SubFormCTPN subFormCTPN;
+        public static SubFormKho subFormKho;
 
         public static int KetNoi()
         {
@@ -50,7 +59,7 @@ namespace QLVT
                     Program.database + ";User Id=" +
                     Program.mlogin + ";password=" + Program.password;
                 Program.conn.ConnectionString = Program.constr;
-                Program.conn.Open();
+                Program.conn.Open();    
                 return 1;
 
             }

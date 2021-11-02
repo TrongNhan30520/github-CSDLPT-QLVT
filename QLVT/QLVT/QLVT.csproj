@@ -105,6 +105,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="FormLapPhieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLapPhieu.Designer.cs">
+      <DependentUpon>FormLapPhieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,12 +122,6 @@
     </Compile>
     <Compile Include="frmKho.Designer.cs">
       <DependentUpon>frmKho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLapPhieu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLapPhieu.Designer.cs">
-      <DependentUpon>frmLapPhieu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhanvien.cs">
       <SubType>Form</SubType>
@@ -143,14 +143,38 @@
     <Compile Include="frmVatTu.Designer.cs">
       <DependentUpon>frmVatTu.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\SubFormCTDDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\SubFormCTDDH.Designer.cs">
+      <DependentUpon>SubFormCTDDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\SubFormCTPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\SubFormCTPN.Designer.cs">
+      <DependentUpon>SubFormCTPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\SubFormCTPX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\SubFormCTPX.Designer.cs">
+      <DependentUpon>SubFormCTPX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\SubFormKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\SubFormKho.Designer.cs">
+      <DependentUpon>SubFormKho.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLapPhieu.resx">
+      <DependentUpon>FormLapPhieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKho.resx">
       <DependentUpon>frmKho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLapPhieu.resx">
-      <DependentUpon>frmLapPhieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
@@ -170,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVatTu.resx">
       <DependentUpon>frmVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\SubFormCTDDH.resx">
+      <DependentUpon>SubFormCTDDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\SubFormKho.resx">
+      <DependentUpon>SubFormKho.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="DS.xsc">
