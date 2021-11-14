@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label mAPXLabel;
-            System.Windows.Forms.Label mAVTLabel;
-            System.Windows.Forms.Label sOLUONGLabel;
-            System.Windows.Forms.Label dONGIALabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubFormCTPX));
+            this.mAPXLabel = new System.Windows.Forms.Label();
+            this.mAVTLabel = new System.Windows.Forms.Label();
+            this.sOLUONGLabel = new System.Windows.Forms.Label();
+            this.dONGIALabel = new System.Windows.Forms.Label();
             this.dS = new QLVT.QLVT_DATHANGDataSet();
             this.bdsVT = new System.Windows.Forms.BindingSource(this.components);
             this.vattuTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.VattuTableAdapter();
@@ -55,10 +54,6 @@
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.phieuXuatTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.PhieuXuatTableAdapter();
             this.cTPXTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.CTPXTableAdapter();
-            mAPXLabel = new System.Windows.Forms.Label();
-            mAVTLabel = new System.Windows.Forms.Label();
-            sOLUONGLabel = new System.Windows.Forms.Label();
-            dONGIALabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vattuGridControl)).BeginInit();
@@ -73,43 +68,43 @@
             // 
             // mAPXLabel
             // 
-            mAPXLabel.AutoSize = true;
-            mAPXLabel.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mAPXLabel.Location = new System.Drawing.Point(45, 36);
-            mAPXLabel.Name = "mAPXLabel";
-            mAPXLabel.Size = new System.Drawing.Size(45, 14);
-            mAPXLabel.TabIndex = 0;
-            mAPXLabel.Text = "Mã PX:";
+            this.mAPXLabel.AutoSize = true;
+            this.mAPXLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mAPXLabel.Location = new System.Drawing.Point(52, 44);
+            this.mAPXLabel.Name = "mAPXLabel";
+            this.mAPXLabel.Size = new System.Drawing.Size(63, 18);
+            this.mAPXLabel.TabIndex = 0;
+            this.mAPXLabel.Text = "Mã PX:";
             // 
             // mAVTLabel
             // 
-            mAVTLabel.AutoSize = true;
-            mAVTLabel.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mAVTLabel.Location = new System.Drawing.Point(44, 72);
-            mAVTLabel.Name = "mAVTLabel";
-            mAVTLabel.Size = new System.Drawing.Size(44, 14);
-            mAVTLabel.TabIndex = 2;
-            mAVTLabel.Text = "Mã VT:";
+            this.mAVTLabel.AutoSize = true;
+            this.mAVTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mAVTLabel.Location = new System.Drawing.Point(51, 89);
+            this.mAVTLabel.Name = "mAVTLabel";
+            this.mAVTLabel.Size = new System.Drawing.Size(61, 18);
+            this.mAVTLabel.TabIndex = 2;
+            this.mAVTLabel.Text = "Mã VT:";
             // 
             // sOLUONGLabel
             // 
-            sOLUONGLabel.AutoSize = true;
-            sOLUONGLabel.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sOLUONGLabel.Location = new System.Drawing.Point(44, 107);
-            sOLUONGLabel.Name = "sOLUONGLabel";
-            sOLUONGLabel.Size = new System.Drawing.Size(60, 14);
-            sOLUONGLabel.TabIndex = 4;
-            sOLUONGLabel.Text = "Số lượng:";
+            this.sOLUONGLabel.AutoSize = true;
+            this.sOLUONGLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sOLUONGLabel.Location = new System.Drawing.Point(51, 132);
+            this.sOLUONGLabel.Name = "sOLUONGLabel";
+            this.sOLUONGLabel.Size = new System.Drawing.Size(80, 18);
+            this.sOLUONGLabel.TabIndex = 4;
+            this.sOLUONGLabel.Text = "Số lượng:";
             // 
             // dONGIALabel
             // 
-            dONGIALabel.AutoSize = true;
-            dONGIALabel.Font = new System.Drawing.Font("SF Pro Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dONGIALabel.Location = new System.Drawing.Point(44, 143);
-            dONGIALabel.Name = "dONGIALabel";
-            dONGIALabel.Size = new System.Drawing.Size(52, 14);
-            dONGIALabel.TabIndex = 6;
-            dONGIALabel.Text = "Đơn giá:";
+            this.dONGIALabel.AutoSize = true;
+            this.dONGIALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dONGIALabel.Location = new System.Drawing.Point(51, 176);
+            this.dONGIALabel.Name = "dONGIALabel";
+            this.dONGIALabel.Size = new System.Drawing.Size(71, 18);
+            this.dONGIALabel.TabIndex = 6;
+            this.dONGIALabel.Text = "Đơn giá:";
             // 
             // dS
             // 
@@ -143,10 +138,12 @@
             // vattuGridControl
             // 
             this.vattuGridControl.DataSource = this.bdsVT;
-            this.vattuGridControl.Location = new System.Drawing.Point(375, 0);
+            this.vattuGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.vattuGridControl.Location = new System.Drawing.Point(437, 0);
             this.vattuGridControl.MainView = this.gvVT;
+            this.vattuGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.vattuGridControl.Name = "vattuGridControl";
-            this.vattuGridControl.Size = new System.Drawing.Size(405, 241);
+            this.vattuGridControl.Size = new System.Drawing.Size(472, 297);
             this.vattuGridControl.TabIndex = 1;
             this.vattuGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVT});
@@ -158,6 +155,7 @@
             this.colTENVT,
             this.colDVT,
             this.colSOLUONGTON});
+            this.gvVT.DetailHeight = 431;
             this.gvVT.GridControl = this.vattuGridControl;
             this.gvVT.Name = "gvVT";
             this.gvVT.OptionsBehavior.Editable = false;
@@ -170,52 +168,58 @@
             // 
             this.colMAVT.Caption = "Mã vật tư";
             this.colMAVT.FieldName = "MAVT";
+            this.colMAVT.MinWidth = 23;
             this.colMAVT.Name = "colMAVT";
             this.colMAVT.Visible = true;
             this.colMAVT.VisibleIndex = 0;
-            this.colMAVT.Width = 73;
+            this.colMAVT.Width = 85;
             // 
             // colTENVT
             // 
             this.colTENVT.Caption = "Tên vật tư";
             this.colTENVT.FieldName = "TENVT";
+            this.colTENVT.MinWidth = 23;
             this.colTENVT.Name = "colTENVT";
             this.colTENVT.Visible = true;
             this.colTENVT.VisibleIndex = 1;
-            this.colTENVT.Width = 157;
+            this.colTENVT.Width = 183;
             // 
             // colDVT
             // 
             this.colDVT.Caption = "Đơn vị tính";
             this.colDVT.FieldName = "DVT";
+            this.colDVT.MinWidth = 23;
             this.colDVT.Name = "colDVT";
             this.colDVT.Visible = true;
             this.colDVT.VisibleIndex = 2;
-            this.colDVT.Width = 70;
+            this.colDVT.Width = 82;
             // 
             // colSOLUONGTON
             // 
             this.colSOLUONGTON.Caption = "Số lượng tồn";
             this.colSOLUONGTON.FieldName = "SOLUONGTON";
+            this.colSOLUONGTON.MinWidth = 23;
             this.colSOLUONGTON.Name = "colSOLUONGTON";
             this.colSOLUONGTON.Visible = true;
             this.colSOLUONGTON.VisibleIndex = 3;
-            this.colSOLUONGTON.Width = 83;
+            this.colSOLUONGTON.Width = 97;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(dONGIALabel);
+            this.groupBox1.Controls.Add(this.dONGIALabel);
             this.groupBox1.Controls.Add(this.numDG);
-            this.groupBox1.Controls.Add(sOLUONGLabel);
+            this.groupBox1.Controls.Add(this.sOLUONGLabel);
             this.groupBox1.Controls.Add(this.numSL);
-            this.groupBox1.Controls.Add(mAVTLabel);
+            this.groupBox1.Controls.Add(this.mAVTLabel);
             this.groupBox1.Controls.Add(this.txtMaVT);
-            this.groupBox1.Controls.Add(mAPXLabel);
+            this.groupBox1.Controls.Add(this.mAPXLabel);
             this.groupBox1.Controls.Add(this.txtMaPX);
-            this.groupBox1.Font = new System.Drawing.Font("SF Pro Display", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(27, 8);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(31, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 182);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(378, 224);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
@@ -224,21 +228,23 @@
             // 
             this.numDG.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsCTPX, "DONGIA", true));
             this.numDG.DecimalPlaces = 2;
-            this.numDG.Font = new System.Drawing.Font("SF Pro Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDG.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numDG.Location = new System.Drawing.Point(108, 140);
+            this.numDG.Location = new System.Drawing.Point(126, 172);
+            this.numDG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numDG.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
             this.numDG.Name = "numDG";
-            this.numDG.Size = new System.Drawing.Size(181, 22);
+            this.numDG.Size = new System.Drawing.Size(211, 24);
             this.numDG.TabIndex = 7;
+            this.numDG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numDG.ThousandsSeparator = true;
             this.numDG.Validating += new System.ComponentModel.CancelEventHandler(this.NumDG_Validating);
             // 
@@ -255,54 +261,49 @@
             // numSL
             // 
             this.numSL.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsCTPX, "SOLUONG", true));
-            this.numSL.Font = new System.Drawing.Font("SF Pro Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSL.Location = new System.Drawing.Point(108, 104);
+            this.numSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSL.Location = new System.Drawing.Point(126, 128);
+            this.numSL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numSL.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numSL.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numSL.Name = "numSL";
-            this.numSL.Size = new System.Drawing.Size(181, 22);
+            this.numSL.Size = new System.Drawing.Size(211, 24);
             this.numSL.TabIndex = 5;
-            this.numSL.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.numSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numSL.Validating += new System.ComponentModel.CancelEventHandler(this.NumSL_Validating);
             // 
             // txtMaVT
             // 
             this.txtMaVT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsCTPX, "MAVT", true));
-            this.txtMaVT.Font = new System.Drawing.Font("SF Pro Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaVT.Location = new System.Drawing.Point(108, 68);
+            this.txtMaVT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaVT.Location = new System.Drawing.Point(126, 84);
+            this.txtMaVT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaVT.Name = "txtMaVT";
             this.txtMaVT.ReadOnly = true;
-            this.txtMaVT.Size = new System.Drawing.Size(181, 22);
+            this.txtMaVT.Size = new System.Drawing.Size(210, 24);
             this.txtMaVT.TabIndex = 3;
             // 
             // txtMaPX
             // 
             this.txtMaPX.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsCTPX, "MAPX", true));
-            this.txtMaPX.Font = new System.Drawing.Font("SF Pro Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaPX.Location = new System.Drawing.Point(108, 32);
+            this.txtMaPX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaPX.Location = new System.Drawing.Point(126, 39);
+            this.txtMaPX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaPX.Name = "txtMaPX";
             this.txtMaPX.ReadOnly = true;
-            this.txtMaPX.Size = new System.Drawing.Size(181, 22);
+            this.txtMaPX.Size = new System.Drawing.Size(210, 24);
             this.txtMaPX.TabIndex = 1;
             // 
             // btnGhi
             // 
-            this.btnGhi.Font = new System.Drawing.Font("SF Pro Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGhi.Location = new System.Drawing.Point(249, 200);
+            this.btnGhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGhi.Location = new System.Drawing.Point(290, 246);
+            this.btnGhi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGhi.Name = "btnGhi";
-            this.btnGhi.Size = new System.Drawing.Size(67, 23);
+            this.btnGhi.Size = new System.Drawing.Size(78, 28);
             this.btnGhi.TabIndex = 11;
             this.btnGhi.Text = "Ghi";
             this.btnGhi.UseVisualStyleBackColor = true;
@@ -322,13 +323,13 @@
             // 
             // SubFormCTPX
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 245);
+            this.ClientSize = new System.Drawing.Size(913, 302);
             this.Controls.Add(this.btnGhi);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.vattuGridControl);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("SubFormCTPX.IconOptions.SvgImage")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SubFormCTPX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Phiếu Xuất";
@@ -373,5 +374,9 @@
         private QLVT_DATHANGDataSetTableAdapters.PhieuXuatTableAdapter phieuXuatTableAdapter;
         private System.Windows.Forms.BindingSource bdsCTPX;
         private QLVT_DATHANGDataSetTableAdapters.CTPXTableAdapter cTPXTableAdapter;
+        private System.Windows.Forms.Label mAPXLabel;
+        private System.Windows.Forms.Label mAVTLabel;
+        private System.Windows.Forms.Label sOLUONGLabel;
+        private System.Windows.Forms.Label dONGIALabel;
     }
 }

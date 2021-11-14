@@ -96,6 +96,7 @@ namespace QLVT
                 MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu \n Bạn xem lại username và password", "", MessageBoxButtons.OK);
                 return;
             }
+            Program.maNV = int.Parse(Program.username);
             Program.mHoten = Program.myReader.GetString(1);
             Program.mGroup = Program.myReader.GetString(2);
             Program.myReader.Close();

@@ -141,8 +141,6 @@
             this.cmsChecked = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fKCTPNPhieuNhapBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.fKCTPNPhieuNhapBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.fKCTPNPhieuNhapBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVienTableAdapter = new QLVT.QLVT_DATHANGDataSetTableAdapters.NhanVienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -189,61 +187,59 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.cmsChecked.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKCTPNPhieuNhapBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKCTPNPhieuNhapBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKCTPNPhieuNhapBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // mAKHOLabel
             // 
             this.mAKHOLabel.AutoSize = true;
-            this.mAKHOLabel.Location = new System.Drawing.Point(105, 125);
+            this.mAKHOLabel.Location = new System.Drawing.Point(102, 149);
             this.mAKHOLabel.Name = "mAKHOLabel";
-            this.mAKHOLabel.Size = new System.Drawing.Size(58, 17);
+            this.mAKHOLabel.Size = new System.Drawing.Size(67, 18);
             this.mAKHOLabel.TabIndex = 11;
             this.mAKHOLabel.Text = "Mã Kho:";
             // 
             // nhaCCLabel
             // 
             this.nhaCCLabel.AutoSize = true;
-            this.nhaCCLabel.Location = new System.Drawing.Point(105, 95);
+            this.nhaCCLabel.Location = new System.Drawing.Point(102, 100);
             this.nhaCCLabel.Name = "nhaCCLabel";
-            this.nhaCCLabel.Size = new System.Drawing.Size(59, 17);
+            this.nhaCCLabel.Size = new System.Drawing.Size(67, 18);
             this.nhaCCLabel.TabIndex = 9;
             this.nhaCCLabel.Text = "Nhà CC:";
             // 
             // masoDDHLabel
             // 
             this.masoDDHLabel.AutoSize = true;
-            this.masoDDHLabel.Location = new System.Drawing.Point(103, 68);
+            this.masoDDHLabel.Location = new System.Drawing.Point(102, 50);
             this.masoDDHLabel.Name = "masoDDHLabel";
-            this.masoDDHLabel.Size = new System.Drawing.Size(63, 17);
+            this.masoDDHLabel.Size = new System.Drawing.Size(72, 18);
             this.masoDDHLabel.TabIndex = 7;
             this.masoDDHLabel.Text = "Mã DDH:";
             // 
             // mAPXLabel
             // 
             this.mAPXLabel.AutoSize = true;
-            this.mAPXLabel.Location = new System.Drawing.Point(103, 70);
+            this.mAPXLabel.Location = new System.Drawing.Point(102, 46);
             this.mAPXLabel.Name = "mAPXLabel";
-            this.mAPXLabel.Size = new System.Drawing.Size(50, 17);
+            this.mAPXLabel.Size = new System.Drawing.Size(59, 18);
             this.mAPXLabel.TabIndex = 13;
             this.mAPXLabel.Text = "Mã PX:";
             // 
             // hOTENKHLabel
             // 
             this.hOTENKHLabel.AutoSize = true;
-            this.hOTENKHLabel.Location = new System.Drawing.Point(103, 100);
+            this.hOTENKHLabel.Location = new System.Drawing.Point(102, 101);
             this.hOTENKHLabel.Name = "hOTENKHLabel";
-            this.hOTENKHLabel.Size = new System.Drawing.Size(57, 17);
+            this.hOTENKHLabel.Size = new System.Drawing.Size(65, 18);
             this.hOTENKHLabel.TabIndex = 14;
             this.hOTENKHLabel.Text = "Tên KH:";
             // 
             // mAKHOLabel1
             // 
             this.mAKHOLabel1.AutoSize = true;
-            this.mAKHOLabel1.Location = new System.Drawing.Point(103, 129);
+            this.mAKHOLabel1.Location = new System.Drawing.Point(102, 153);
             this.mAKHOLabel1.Name = "mAKHOLabel1";
-            this.mAKHOLabel1.Size = new System.Drawing.Size(58, 17);
+            this.mAKHOLabel1.Size = new System.Drawing.Size(67, 18);
             this.mAKHOLabel1.TabIndex = 15;
             this.mAKHOLabel1.Text = "Mã Kho:";
             // 
@@ -408,7 +404,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 973);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1504);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1128, 20);
             // 
@@ -418,7 +414,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 943);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1474);
             // 
             // barDockControlRight
             // 
@@ -426,7 +422,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1128, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 943);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 1474);
             // 
             // groupControl1
             // 
@@ -577,6 +573,7 @@
             // 
             // fKCTDDHDatHangBindingSource
             // 
+            this.fKCTDDHDatHangBindingSource.DataMember = "FK_CTDDH_DatHang";
             this.fKCTDDHDatHangBindingSource.DataSource = this.bdsDH;
             // 
             // bdsPX
@@ -690,6 +687,7 @@
             // 
             // fKCTPNPhieuNhapBindingSource5
             // 
+            this.fKCTPNPhieuNhapBindingSource5.DataMember = "FK_CTPN_PhieuNhap";
             this.fKCTPNPhieuNhapBindingSource5.DataSource = this.fKPhieuNhapDatHangBindingSource1;
             // 
             // cTPNTableAdapter
@@ -716,7 +714,7 @@
             this.gcDDH.Dock = System.Windows.Forms.DockStyle.Top;
             this.gcDDH.Location = new System.Drawing.Point(0, 585);
             this.gcDDH.Name = "gcDDH";
-            this.gcDDH.Size = new System.Drawing.Size(1128, 256);
+            this.gcDDH.Size = new System.Drawing.Size(1128, 288);
             this.gcDDH.TabIndex = 23;
             this.gcDDH.Text = "Đặt Hàng";
             // 
@@ -725,11 +723,11 @@
             this.gridCTDDH.DataSource = this.bdsCTDDH;
             this.gridCTDDH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCTDDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridCTDDH.Location = new System.Drawing.Point(495, 28);
+            this.gridCTDDH.Location = new System.Drawing.Point(578, 28);
             this.gridCTDDH.MainView = this.gvCTDDH;
             this.gridCTDDH.MenuManager = this.barManager1;
             this.gridCTDDH.Name = "gridCTDDH";
-            this.gridCTDDH.Size = new System.Drawing.Size(631, 226);
+            this.gridCTDDH.Size = new System.Drawing.Size(548, 258);
             this.gridCTDDH.TabIndex = 1;
             this.gridCTDDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCTDDH});
@@ -802,50 +800,52 @@
             this.gbInfoDDH.Controls.Add(this.masoDDHLabel);
             this.gbInfoDDH.Controls.Add(this.txtMaDDH);
             this.gbInfoDDH.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gbInfoDDH.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInfoDDH.Location = new System.Drawing.Point(2, 28);
             this.gbInfoDDH.Name = "gbInfoDDH";
-            this.gbInfoDDH.Size = new System.Drawing.Size(493, 226);
+            this.gbInfoDDH.Size = new System.Drawing.Size(576, 258);
             this.gbInfoDDH.TabIndex = 0;
             this.gbInfoDDH.TabStop = false;
             this.gbInfoDDH.Text = "Thông Tin";
             // 
             // btnGridKho
             // 
-            this.btnGridKho.Location = new System.Drawing.Point(338, 122);
+            this.btnGridKho.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGridKho.Location = new System.Drawing.Point(389, 141);
             this.btnGridKho.Name = "btnGridKho";
-            this.btnGridKho.Size = new System.Drawing.Size(42, 21);
+            this.btnGridKho.Size = new System.Drawing.Size(53, 26);
             this.btnGridKho.TabIndex = 13;
-            this.btnGridKho.Text = "...";
+            this.btnGridKho.Text = "chọn";
             this.btnGridKho.UseVisualStyleBackColor = true;
             this.btnGridKho.Click += new System.EventHandler(this.BtnGridKho_Click);
             // 
             // txtMaKho_DH
             // 
             this.txtMaKho_DH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsDH, "MAKHO", true));
-            this.txtMaKho_DH.Location = new System.Drawing.Point(167, 122);
+            this.txtMaKho_DH.Location = new System.Drawing.Point(204, 141);
             this.txtMaKho_DH.Name = "txtMaKho_DH";
             this.txtMaKho_DH.ReadOnly = true;
-            this.txtMaKho_DH.Size = new System.Drawing.Size(164, 23);
+            this.txtMaKho_DH.Size = new System.Drawing.Size(164, 26);
             this.txtMaKho_DH.TabIndex = 12;
             this.txtMaKho_DH.Validating += new System.ComponentModel.CancelEventHandler(this.TxtMaKho_DH_Validating);
             // 
             // txtNhaCC
             // 
             this.txtNhaCC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsDH, "NhaCC", true));
-            this.txtNhaCC.Location = new System.Drawing.Point(167, 92);
+            this.txtNhaCC.Location = new System.Drawing.Point(204, 92);
             this.txtNhaCC.MaxLength = 100;
             this.txtNhaCC.Name = "txtNhaCC";
-            this.txtNhaCC.Size = new System.Drawing.Size(164, 23);
+            this.txtNhaCC.Size = new System.Drawing.Size(164, 26);
             this.txtNhaCC.TabIndex = 10;
             this.txtNhaCC.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNhaCC_Validating);
             // 
             // txtMaDDH
             // 
             this.txtMaDDH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsDH, "MasoDDH", true));
-            this.txtMaDDH.Location = new System.Drawing.Point(167, 65);
+            this.txtMaDDH.Location = new System.Drawing.Point(204, 42);
             this.txtMaDDH.MaxLength = 8;
             this.txtMaDDH.Name = "txtMaDDH";
-            this.txtMaDDH.Size = new System.Drawing.Size(164, 23);
+            this.txtMaDDH.Size = new System.Drawing.Size(164, 26);
             this.txtMaDDH.TabIndex = 8;
             this.txtMaDDH.Validating += new System.ComponentModel.CancelEventHandler(this.TxtMaDDH_Validating);
             // 
@@ -854,9 +854,9 @@
             this.gcPX.Controls.Add(this.gridCTPX);
             this.gcPX.Controls.Add(this.gbInfoPX);
             this.gcPX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcPX.Location = new System.Drawing.Point(0, 841);
+            this.gcPX.Location = new System.Drawing.Point(0, 873);
             this.gcPX.Name = "gcPX";
-            this.gcPX.Size = new System.Drawing.Size(1128, 36);
+            this.gcPX.Size = new System.Drawing.Size(1128, 298);
             this.gcPX.TabIndex = 31;
             this.gcPX.Text = "Phiếu Xuất";
             this.gcPX.Visible = false;
@@ -866,11 +866,11 @@
             this.gridCTPX.DataSource = this.bdsCTPX;
             this.gridCTPX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCTPX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridCTPX.Location = new System.Drawing.Point(495, 28);
+            this.gridCTPX.Location = new System.Drawing.Point(578, 28);
             this.gridCTPX.MainView = this.gvCTPX;
             this.gridCTPX.MenuManager = this.barManager1;
             this.gridCTPX.Name = "gridCTPX";
-            this.gridCTPX.Size = new System.Drawing.Size(631, 6);
+            this.gridCTPX.Size = new System.Drawing.Size(548, 268);
             this.gridCTPX.TabIndex = 1;
             this.gridCTPX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCTPX});
@@ -942,9 +942,10 @@
             this.gbInfoPX.Controls.Add(this.txtMaPX);
             this.gbInfoPX.Controls.Add(this.btnGridKho2);
             this.gbInfoPX.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gbInfoPX.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInfoPX.Location = new System.Drawing.Point(2, 28);
             this.gbInfoPX.Name = "gbInfoPX";
-            this.gbInfoPX.Size = new System.Drawing.Size(493, 6);
+            this.gbInfoPX.Size = new System.Drawing.Size(576, 268);
             this.gbInfoPX.TabIndex = 0;
             this.gbInfoPX.TabStop = false;
             this.gbInfoPX.Text = "Thông Tin";
@@ -952,40 +953,41 @@
             // txtMaKho_PX
             // 
             this.txtMaKho_PX.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsPX, "MAKHO", true));
-            this.txtMaKho_PX.Location = new System.Drawing.Point(164, 126);
+            this.txtMaKho_PX.Location = new System.Drawing.Point(204, 145);
             this.txtMaKho_PX.Name = "txtMaKho_PX";
             this.txtMaKho_PX.ReadOnly = true;
-            this.txtMaKho_PX.Size = new System.Drawing.Size(166, 23);
+            this.txtMaKho_PX.Size = new System.Drawing.Size(166, 26);
             this.txtMaKho_PX.TabIndex = 16;
             this.txtMaKho_PX.Validating += new System.ComponentModel.CancelEventHandler(this.TxtMaKho_PX_Validating);
             // 
             // txtTenKH
             // 
             this.txtTenKH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsPX, "HOTENKH", true));
-            this.txtTenKH.Location = new System.Drawing.Point(164, 97);
+            this.txtTenKH.Location = new System.Drawing.Point(204, 93);
             this.txtTenKH.MaxLength = 100;
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(166, 23);
+            this.txtTenKH.Size = new System.Drawing.Size(166, 26);
             this.txtTenKH.TabIndex = 15;
             this.txtTenKH.Validating += new System.ComponentModel.CancelEventHandler(this.TxtTenKH_Validating);
             // 
             // txtMaPX
             // 
             this.txtMaPX.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsPX, "MAPX", true));
-            this.txtMaPX.Location = new System.Drawing.Point(163, 67);
+            this.txtMaPX.Location = new System.Drawing.Point(204, 38);
             this.txtMaPX.MaxLength = 8;
             this.txtMaPX.Name = "txtMaPX";
-            this.txtMaPX.Size = new System.Drawing.Size(167, 23);
+            this.txtMaPX.Size = new System.Drawing.Size(167, 26);
             this.txtMaPX.TabIndex = 14;
             this.txtMaPX.Validating += new System.ComponentModel.CancelEventHandler(this.TxtMaPX_Validating);
             // 
             // btnGridKho2
             // 
-            this.btnGridKho2.Location = new System.Drawing.Point(338, 127);
+            this.btnGridKho2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGridKho2.Location = new System.Drawing.Point(389, 145);
             this.btnGridKho2.Name = "btnGridKho2";
-            this.btnGridKho2.Size = new System.Drawing.Size(34, 21);
+            this.btnGridKho2.Size = new System.Drawing.Size(53, 26);
             this.btnGridKho2.TabIndex = 13;
-            this.btnGridKho2.Text = "...";
+            this.btnGridKho2.Text = "chọn";
             this.btnGridKho2.UseVisualStyleBackColor = true;
             this.btnGridKho2.Click += new System.EventHandler(this.BtnGridKho2_Click);
             // 
@@ -993,9 +995,9 @@
             // 
             this.gcPN.Controls.Add(this.splitContainer1);
             this.gcPN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcPN.Location = new System.Drawing.Point(0, 877);
+            this.gcPN.Location = new System.Drawing.Point(0, 1171);
             this.gcPN.Name = "gcPN";
-            this.gcPN.Size = new System.Drawing.Size(1128, 96);
+            this.gcPN.Size = new System.Drawing.Size(1128, 333);
             this.gcPN.TabIndex = 36;
             this.gcPN.Text = "Phiếu Nhập";
             this.gcPN.Visible = false;
@@ -1013,7 +1015,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridCTPN);
-            this.splitContainer1.Size = new System.Drawing.Size(1124, 66);
+            this.splitContainer1.Size = new System.Drawing.Size(1124, 303);
             this.splitContainer1.SplitterDistance = 604;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -1025,12 +1027,12 @@
             this.gridPN.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridPN.EmbeddedNavigator.Appearance.Options.UseBorderColor = true;
             this.gridPN.EmbeddedNavigator.Appearance.Options.UseFont = true;
-            this.gridPN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridPN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridPN.Location = new System.Drawing.Point(0, 0);
             this.gridPN.MainView = this.gvPN;
             this.gridPN.MenuManager = this.barManager1;
             this.gridPN.Name = "gridPN";
-            this.gridPN.Size = new System.Drawing.Size(604, 66);
+            this.gridPN.Size = new System.Drawing.Size(604, 303);
             this.gridPN.TabIndex = 1;
             this.gridPN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPN});
@@ -1121,7 +1123,7 @@
             this.gridCTPN.MainView = this.gridView5;
             this.gridCTPN.MenuManager = this.barManager1;
             this.gridCTPN.Name = "gridCTPN";
-            this.gridCTPN.Size = new System.Drawing.Size(516, 66);
+            this.gridCTPN.Size = new System.Drawing.Size(516, 303);
             this.gridCTPN.TabIndex = 2;
             this.gridCTPN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -1194,13 +1196,14 @@
             this.cmsCTDDH.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miThemCTDDH});
             this.cmsCTDDH.Name = "cmsCTDDH";
-            this.cmsCTDDH.Size = new System.Drawing.Size(236, 26);
+            this.cmsCTDDH.Size = new System.Drawing.Size(240, 30);
             // 
             // miThemCTDDH
             // 
             this.miThemCTDDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.miThemCTDDH.Image = global::QLVT.Properties.Resources.add_phieu_nhap;
             this.miThemCTDDH.Name = "miThemCTDDH";
-            this.miThemCTDDH.Size = new System.Drawing.Size(235, 22);
+            this.miThemCTDDH.Size = new System.Drawing.Size(239, 26);
             this.miThemCTDDH.Text = "Thêm chi tiết đơn ĐH";
             this.miThemCTDDH.Click += new System.EventHandler(this.MiThemCTDDH_Click);
             // 
@@ -1211,13 +1214,14 @@
             this.cmsCTPX.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miThemCTPX});
             this.cmsCTPX.Name = "cmsCTPX";
-            this.cmsCTPX.Size = new System.Drawing.Size(255, 26);
+            this.cmsCTPX.Size = new System.Drawing.Size(259, 30);
             // 
             // miThemCTPX
             // 
             this.miThemCTPX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.miThemCTPX.Image = global::QLVT.Properties.Resources.add_phieu_nhap;
             this.miThemCTPX.Name = "miThemCTPX";
-            this.miThemCTPX.Size = new System.Drawing.Size(254, 22);
+            this.miThemCTPX.Size = new System.Drawing.Size(258, 26);
             this.miThemCTPX.Text = "Thêm chi tiết phiếu xuất";
             this.miThemCTPX.Click += new System.EventHandler(this.MiThemCTPX_Click);
             // 
@@ -1231,51 +1235,57 @@
             this.miGhiPN,
             this.miThemCTPN});
             this.cmsPN.Name = "cmsPN";
-            this.cmsPN.Size = new System.Drawing.Size(260, 92);
+            this.cmsPN.Size = new System.Drawing.Size(264, 108);
             // 
             // miThemPN
             // 
+            this.miThemPN.Image = global::QLVT.Properties.Resources.add_phieu_nhap_1;
             this.miThemPN.Name = "miThemPN";
-            this.miThemPN.Size = new System.Drawing.Size(259, 22);
+            this.miThemPN.Size = new System.Drawing.Size(263, 26);
             this.miThemPN.Text = "Thêm phiếu nhập";
             this.miThemPN.Click += new System.EventHandler(this.MiThemPN_Click);
             // 
             // miXoaPN
             // 
             this.miXoaPN.Enabled = false;
+            this.miXoaPN.Image = global::QLVT.Properties.Resources.delete_1;
             this.miXoaPN.Name = "miXoaPN";
-            this.miXoaPN.Size = new System.Drawing.Size(259, 22);
+            this.miXoaPN.Size = new System.Drawing.Size(263, 26);
             this.miXoaPN.Text = "Xóa phiếu nhập";
             this.miXoaPN.Click += new System.EventHandler(this.MiXoaPN_Click);
             // 
             // miGhiPN
             // 
             this.miGhiPN.Enabled = false;
+            this.miGhiPN.Image = global::QLVT.Properties.Resources.save;
             this.miGhiPN.Name = "miGhiPN";
-            this.miGhiPN.Size = new System.Drawing.Size(259, 22);
+            this.miGhiPN.Size = new System.Drawing.Size(263, 26);
             this.miGhiPN.Text = "Ghi vào database";
             this.miGhiPN.Click += new System.EventHandler(this.MiGhiPN_Click);
             // 
             // miThemCTPN
             // 
+            this.miThemCTPN.Image = global::QLVT.Properties.Resources.add_phieu_nhap;
             this.miThemCTPN.Name = "miThemCTPN";
-            this.miThemCTPN.Size = new System.Drawing.Size(259, 22);
+            this.miThemCTPN.Size = new System.Drawing.Size(263, 26);
             this.miThemCTPN.Text = "Thêm chi tiết phiếu nhập";
             this.miThemCTPN.Click += new System.EventHandler(this.MiThemCTPN_Click);
             // 
             // cmsChecked
             // 
+            this.cmsChecked.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsChecked.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsChecked.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem});
             this.cmsChecked.Name = "cmsChecked";
-            this.cmsChecked.Size = new System.Drawing.Size(321, 28);
+            this.cmsChecked.Size = new System.Drawing.Size(385, 30);
             // 
             // bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem
             // 
             this.bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem.Enabled = false;
+            this.bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem.Image = global::QLVT.Properties.Resources.delete_2;
             this.bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem.Name = "bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem";
-            this.bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem.Size = new System.Drawing.Size(320, 24);
+            this.bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem.Size = new System.Drawing.Size(384, 26);
             this.bạnKhôngPhảiNgườiLậpPhiếuNàyToolStripMenuItem.Text = "Bạn không phải người lập phiếu này.";
             // 
             // fKCTPNPhieuNhapBindingSource1
@@ -1354,8 +1364,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.cmsChecked.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fKCTPNPhieuNhapBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKCTPNPhieuNhapBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKCTPNPhieuNhapBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1466,8 +1474,6 @@
         private System.Windows.Forms.BindingSource fKCTDDHDatHangBindingSource;
         private System.Windows.Forms.BindingSource fKCTPXPXBindingSource;
         private System.Windows.Forms.BindingSource fKCTPNPhieuNhapBindingSource1;
-        private System.Windows.Forms.BindingSource fKCTPNPhieuNhapBindingSource3;
-        private System.Windows.Forms.BindingSource fKCTPNPhieuNhapBindingSource4;
         private System.Windows.Forms.BindingSource fKPhieuNhapDatHangBindingSource1;
         private System.Windows.Forms.BindingSource fKCTPNPhieuNhapBindingSource5;
         private System.Windows.Forms.Label mAKHOLabel;

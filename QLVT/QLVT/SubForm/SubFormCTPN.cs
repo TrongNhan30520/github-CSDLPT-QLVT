@@ -199,5 +199,24 @@ namespace QLVT.SubForm
                 }
             }
         }
+        private void NumDG_Validating(object sender, CancelEventArgs e)
+        {
+            if (numDG.Value == 0)
+            {
+                e.Cancel = true;
+                numDG.Focus();
+                errorProvider.SetError(numDG, "Đơn giá phải lớn hơn 0!");
+            }
+        }
+
+        private void NumSL_Validating(object sender, CancelEventArgs e)
+        {
+            if (numSL.Value <= 0)
+            {
+                e.Cancel = true;
+                numSL.Focus();
+                errorProvider.SetError(numSL, "Số lượng phải lớn hơn 0!");
+            }
+        }
     }
 }

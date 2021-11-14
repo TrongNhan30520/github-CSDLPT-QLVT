@@ -22,11 +22,9 @@ namespace QLVT
         int position = 0;
         string maCN = "";
 
-        // Do form phiếu thiết kế theo kiểu tổng hợp của 3 loại phiếu,
-        // nên tùy vào user chọn phiếu nào hệ thống sẽ gán binding source tương ứng
         BindingSource current_bds = null;
         GridControl current_gc = null;
-        GroupBox current_gb = null; // Khu vực điền thông tin phiếu
+        GroupBox current_gb = null; 
         string type = "";
 
         // Stack
@@ -58,14 +56,12 @@ namespace QLVT
 
         private void FormLapPhieu_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dS.NhanVien' table. You can move, or remove it, as needed.
             gridDDH.Height = 435;
             gridPX.Height = 435;
             gcDDH.Height = 240;
             gcPX.Height = 240;
             gcPN.Height = 240;
 
-            // Không kiểm tra khóa ngoại
             dS.EnforceConstraints = false;
 
             this.datHangTableAdapter.Connection.ConnectionString = Program.constr;
@@ -79,10 +75,10 @@ namespace QLVT
             this.phieuXuatTableAdapter.Connection.ConnectionString = Program.constr;
             this.phieuXuatTableAdapter.Fill(this.dS.PhieuXuat);
             this.cTPXTableAdapter.Connection.ConnectionString = Program.constr;
-            this.cTPXTableAdapter.Fill(this.dS.CTPX);
+            this.cTPXTableAdapter.Fill(this.dS.CTPX);// Lúc đúng lúc sai, tìm cách khác
 
-            //maCN = ((DataRowView)bdsDH[0])["MACN"].ToString(); // Lúc đúng lúc sai, tìm cách khác.
-            comboBox_ChiNhanh.DataSource = Program.bds_dspm;  // sao chép bds_dspm đã load ở form đăng nhập  qua
+            //maCN = ((DataRowView)bdsDH[0])["MACN"].ToString(); 
+            comboBox_ChiNhanh.DataSource = Program.bds_dspm; 
             comboBox_ChiNhanh.DisplayMember = "TENCN";
             comboBox_ChiNhanh.ValueMember = "TENSERVER";
             comboBox_ChiNhanh.SelectedIndex = Program.mchiNhanh;
@@ -120,34 +116,11 @@ namespace QLVT
             historyPN = new Stack<string>();
         }
 
-        private void updateChiTietPhieuTableAdapter()
-        {
-            if (btnSwitch.Links[0].Caption.Equals("Phiếu Xuất"))
-            {
-                this.cTPXTableAdapter.Update(this.dS.CTPX);
-                return;
-            }
-            if (btnSwitch.Links[0].Caption.Equals("Đặt Hàng"))
-            {
-                this.cTDDHTableAdapter.Update(this.dS.CTDDH);
-                return;
-            }
-            if (btnSwitch.Links[0].Caption.Equals("Phiếu Nhập"))
-            {
-                this.cTPNTableAdapter.Update(this.dS.CTPN);
-                return;
-            }
-        }
-
         private void ComboBox_ChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Trường hợp chưa kịp chọn CN, thuộc tính index ở combobox sẽ thay đổi
-            // "System.Data.DataRowView" sẽ xuất hiện và tất nhiên hệ thống sẽ không thể
-            // nhận diện được tên server "System.Data.DataRowView".
             if (comboBox_ChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView") return;
             if (comboBox_ChiNhanh.SelectedValue.ToString() == null) return;
 
-            // Lấy tên server
             Program.servername = comboBox_ChiNhanh.SelectedValue.ToString();
 
             // Nếu tên server khác với tên server ngoài đăng nhập, thì ta phải sử dụng HTKN
@@ -178,6 +151,25 @@ namespace QLVT
             }
         }
 
+        private void updateChiTietPhieuTableAdapter()
+        {
+            if (btnSwitch.Links[0].Caption.Equals("Phiếu Xuất"))
+            {
+                this.cTPXTableAdapter.Update(this.dS.CTPX);
+                return;
+            }
+            if (btnSwitch.Links[0].Caption.Equals("Đặt Hàng"))
+            {
+                this.cTDDHTableAdapter.Update(this.dS.CTDDH);
+                return;
+            }
+            if (btnSwitch.Links[0].Caption.Equals("Phiếu Nhập"))
+            {
+                this.cTPNTableAdapter.Update(this.dS.CTPN);
+                return;
+            }
+        }
+
         // ------ UNDO ------
         private void pushHistory(string data)
         {
@@ -195,14 +187,6 @@ namespace QLVT
             }
         }
 
-        private void unClickThem()
-        {
-            btnThem.Enabled = btnXoa.Enabled = btnSwitch.Enabled = true;
-            current_gc.Enabled = btnReload.Enabled = true;
-            current_gb.Enabled = btnGhi.Enabled = false;
-            current_bds.CancelEdit();
-            current_bds.Position = position;
-        }
 
         private void unClickThemPhieuNhap()
         {
@@ -221,6 +205,14 @@ namespace QLVT
 
             return indexDataRowUpdated;
         }
+        private void unClickThem()
+        {
+            btnThem.Enabled = btnXoa.Enabled = btnSwitch.Enabled = true;
+            current_gc.Enabled = btnReload.Enabled = true;
+            current_gb.Enabled = btnGhi.Enabled = false;
+            current_bds.CancelEdit();
+            current_bds.Position = position;
+        }
 
         private string[] split_data(string XOABTN)
         {
@@ -228,43 +220,6 @@ namespace QLVT
             string[] data = XOABTN.Split(separators, StringSplitOptions.RemoveEmptyEntries);
             return data;
         }
-
-        private void unClickGhi(int index)
-        {
-            // Giữ lại mã phiếu đề phòng trường hợp user cancel việc undo
-            string maPhieu_backup = ((DataRowView)current_bds[index])[0].ToString().Trim();
-
-            DialogResult dr = MessageBox.Show("Phiếu '" + maPhieu_backup + "' đã được ghi vào database.\nBạn có chắc muốn Undo không??", "Xác nhận",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                //int deletedPosition = current_bds.Find(type, maPhieu);
-
-                string name_backup = ((DataRowView)current_bds[index])[2].ToString().Trim();
-                string maKho_backup = ((DataRowView)current_bds[index])[4].ToString().Trim();
-                current_bds.RemoveAt(index);
-                themFunc();
-                if (btnSwitch.Links[0].Caption.Equals("Phiếu Xuất"))
-                {
-                    this.phieuXuatTableAdapter.Update(this.dS.PhieuXuat);
-                    txtMaPX.Text = maPhieu_backup;
-                    txtTenKH.Text = name_backup;
-                    txtMaKho_PX.Text = maKho_backup;
-                }
-                else
-                {
-                    this.datHangTableAdapter.Update(this.dS.DatHang);
-                    txtMaDDH.Text = maPhieu_backup;
-                    txtNhaCC.Text = name_backup;
-                    txtMaKho_DH.Text = maKho_backup;
-                }
-
-                return;
-            }
-
-            pushHistory(GHI_BTN + "#%" + maPhieu_backup);
-        }
-
         private void unClickXoa(string[] data_backup, BindingSource currBds)
         {
             currBds.AddNew();
@@ -288,6 +243,40 @@ namespace QLVT
             {
                 this.phieuNhapTableAdapter.Update(this.dS.PhieuNhap);
             }
+        }
+
+        private void unClickGhi(int index)
+        {
+            // Giữ lại mã phiếu đề phòng trường hợp user cancel việc undo
+            string maPhieu_backup = ((DataRowView)current_bds[index])[0].ToString().Trim();
+
+            DialogResult dr = MessageBox.Show("Phiếu '" + maPhieu_backup + "' đã được ghi vào database.\nBạn có chắc muốn Undo không??", "Xác nhận",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                string name_backup = ((DataRowView)current_bds[index])[2].ToString().Trim();
+                string maKho_backup = ((DataRowView)current_bds[index])[4].ToString().Trim();
+                current_bds.RemoveAt(index);
+                themFunc();
+                if (btnSwitch.Links[0].Caption.Equals("Phiếu Xuất"))
+                {
+                    this.phieuXuatTableAdapter.Update(this.dS.PhieuXuat);
+                    txtMaPX.Text = maPhieu_backup;
+                    txtTenKH.Text = name_backup;
+                    txtMaKho_PX.Text = maKho_backup;
+                }
+                else
+                {
+                    this.datHangTableAdapter.Update(this.dS.DatHang);
+                    txtMaDDH.Text = maPhieu_backup;
+                    txtNhaCC.Text = name_backup;
+                    txtMaKho_DH.Text = maKho_backup;
+                }
+
+                return;
+            }
+
+            pushHistory(GHI_BTN + "#%" + maPhieu_backup);
         }
 
         private void unClickMenuItemThemChiTietPhieu(int index, BindingSource currBds)
@@ -319,7 +308,6 @@ namespace QLVT
             pushHistory(GHI_CTP_BTN + "#%" + maPhieu_backup + "#%" + maVatTu_backup);
         }
 
-        // Vẫn còn th sai
         private void undo_update_SoLuongVT(string maVatTu, int soLuong, string type)
         {
             Program.conn = new SqlConnection(Program.constr);
@@ -397,7 +385,6 @@ namespace QLVT
         {
             int maNhanVien = int.Parse(((DataRowView)current_bds[current_bds.Position])["MANV"].ToString());
 
-            //if (check_owner(current_bds, type.Equals("MAPX") ? gvPX : gvDDH)) {
             if (Program.maNV == maNhanVien)
             {
                 string maPhieu = "";
@@ -413,7 +400,6 @@ namespace QLVT
                 }
                 else
                 {
-                    //type = "MasoDDH";
                     if (bdsCTDDH.Count > 0)
                     {
                         MessageBox.Show("Không thể xóa đơn đặt hàng này vì đã lập chi tiết DDH", "Lỗi",
@@ -538,8 +524,6 @@ namespace QLVT
 
             if (undoHistory.Contains("_ctp"))
             {
-                // Nếu con trỏ không đứng đúng vị trí của mẩu tin vừa mới thêm thì ta phải giữ lại
-                // mã phiếu để sử dụng cho lần undo kế tiếp (sau khi đã về đúng vị trí)
                 string data_backup = undoHistory;
                 string[] data_backup_split = split_data(undoHistory);
                 if (check_position(data_backup, data_backup_split[1]))
@@ -574,8 +558,6 @@ namespace QLVT
 
         private bool check_position(string data_backup, string value)
         {
-            // tìm vị trí của đơn đặt hàng/phiếu mới thêm Chi tiết DDH/phiếu
-            // và set position của bds hiện tại vào đúng vị trí đó 
             int indexLastDataRow = current_bds.Find(type, value);
             if (current_bds.Position != indexLastDataRow)
             {
@@ -680,7 +662,6 @@ namespace QLVT
                             btnThem.Enabled = btnXoa.Enabled = current_gc.Enabled = true;
                             btnReload.Enabled = btnGhi.Enabled = btnSwitch.Enabled = true;
                             current_bds.EndEdit();
-
                             if (btnSwitch.Links[0].Caption.Equals("Phiếu Xuất"))
                             {
                                 this.phieuXuatTableAdapter.Update(this.dS.PhieuXuat);
@@ -692,7 +673,6 @@ namespace QLVT
                                 historyDDH.Push(GHI_BTN + "#%" + tb_maPhieu.Text);
                             }
                             current_bds.Position = position;
-                            //Program.frmChinh.timer1.Enabled = true;
                         }
                         catch (Exception ex)
                         {
@@ -717,10 +697,8 @@ namespace QLVT
         {
             if (e.MenuType == GridMenuType.Row)
             {
-                //DXMenuItem menuThemCTDDH = createMenuItem("Thêm chi tiết DDH", null);
+                
                 DXMenuItem menuItemUp = new DXMenuItem("Move Up");
-                //menuThemCTDDH.Click += new EventHandler(menuAddChiTietDDH_Click);
-                //e.Menu.Items.Add(menuThemCTDDH);
                 e.Menu.Items.Add(menuItemUp);
             }
         }
@@ -764,17 +742,11 @@ namespace QLVT
 
         private void MiThemPN_Click(object sender, EventArgs e)
         {
-            //Program.subFormPN = new SubFormPN();
-            //Program.subFormPN.Show();
-            //Program.formMain.Enabled = false;
             this.bdsPN.AddNew();
 
             gridDDH.Enabled = false;
             cmsPN.Items[2].Enabled = true;
 
-            // Set value cho mẩu tin
-            //string maDDH = ((DataRowView)bdsDH[bdsDH.Position])["MasoDDH"].ToString().Trim();
-            //((DataRowView)bdsPN[bdsPN.Position])["MasoDDH"] = maDDH;
             string maKho = ((DataRowView)bdsDH[bdsDH.Position])["MAKHO"].ToString().Trim();
             ((DataRowView)bdsPN[bdsPN.Position])["MAKHO"] = maKho;
             ((DataRowView)bdsPN[bdsPN.Position])["MANV"] = Program.maNV;
@@ -788,10 +760,6 @@ namespace QLVT
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 string maPN = this.gvPN.GetRowCellValue(bdsPN.Position, "MAPN").ToString();
-
-                // Check ràng buộc mã các phiếu
-                //int indexMaPhieu = bdsPN.Find("", maPN);
-                //int indexCurrent = bdsPN.Position;
                 DialogResult dr = MessageBox.Show("Bạn có chắc muốn ghi dữ liệu vào Database?", "Thông báo",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
@@ -805,7 +773,6 @@ namespace QLVT
 
                         string maSoDDH = this.gvPN.GetRowCellValue(bdsPN.Position, "MasoDDH").ToString().Trim();
                         pushHistory(GHIPN_BTN + "#%" + maSoDDH + "#%" + maPN);
-                        //Program.frmChinh.timer1.Enabled = true;
                     }
                     catch (Exception ex)
                     {
@@ -930,7 +897,6 @@ namespace QLVT
         private void BtnPX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             switchPanel("Phiếu Xuất", gcPX, gridPX);
-            //btnThem.Enabled = btnXoa.Enabled = true;
             if (Program.mGroup == "CONGTY")
             {
                 comboBox_ChiNhanh.Enabled = true;  // bật tắt theo phân quyền
@@ -954,7 +920,6 @@ namespace QLVT
         private void switchPanel(string type, GroupControl groupControl, GridControl gridControl)
         {
             btnSwitch.Links[0].Caption = type;
-            //btnSwitch.Links[0].ImageOptions.Image = image;
             gcDDH.Visible = false;
             gcPX.Visible = false;
             gcPN.Visible = false;

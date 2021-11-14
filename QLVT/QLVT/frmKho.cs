@@ -38,7 +38,6 @@ namespace QLVT
 
         private void FormKho_Load(object sender, EventArgs e)
         {
-            // Không kiểm tra khóa ngoại
             dS.EnforceConstraints = false;
 
             this.khoTableAdapter.Connection.ConnectionString = Program.constr;
@@ -60,35 +59,22 @@ namespace QLVT
                 comboBox_ChiNhanh.Enabled = txtMaKho.Enabled = false;
             }
 
-            maCN = (((DataRowView)bdsKho[0])["MACN"].ToString()); // lúc đúng lúc sai
+            maCN = (((DataRowView)bdsKho[0])["MACN"].ToString());
 
             this.comboBox_ChiNhanh.DataSource = Program.bds_dspm; // DataSource của comboBox_ChiNhanh tham chiếu đến bindingSource ở LoginForm
             comboBox_ChiNhanh.DisplayMember = "TENCN";
             comboBox_ChiNhanh.ValueMember = "TENSERVER";
             comboBox_ChiNhanh.SelectedIndex = Program.mchiNhanh;
 
-            //Mặc định vừa vào groupbox không dx hiện để tránh lỗi sửa các dòng cũ chưa lưu đi qua dòng khác
             btnUndo.Enabled = false;
-            //Program.flagCloseFormKho = true; //Khi load bật cho phép có thể đóng form
 
             history_kho = new Stack<string>();
-        }
-
-        private void themFunc()
-        {
-            position = bdsKho.Position;
-            txtMaKho.Enabled = true;
-            this.bdsKho.AddNew();
-            txtMaCN.Text = maCN;
-            btnThem.Enabled = btnXoa.Enabled = khoGridControl.Enabled = btnReload.Enabled = false;
-            btnUndo.Enabled = gcInfoKho.Enabled = btnGhi.Enabled = true;
         }
 
         private void BtnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             themFunc();
             history_kho.Push(THEM_BTN);
-            //Program.flagCloseFormKho = false;    //Bật cờ lên để chặn tắt Form đột ngột khi nhập liệu
         }
 
         private void BtnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -96,20 +82,20 @@ namespace QLVT
             string maKho = "";
             if (bdsDH.Count > 0)
             {
-                MessageBox.Show("Không thể xóa kho vì đã lập đơn đặt hàng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không thể xóa vì kho đã có đơn đặt hàng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (bdsPN.Count > 0)
             {
-                MessageBox.Show("Không thể xóa kho vì đã lập phiếu nhập", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không thể xóa vì kho đã có phiếu nhập", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (bdsPX.Count > 0)
             {
-                MessageBox.Show("Không thể xóa kho vì đã lập phiếu xuất", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không thể xóa vì kho đã có phiếu xuất", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            DialogResult dr = MessageBox.Show("Bạn có thực sự muốn xóa kho này không?", "Xác nhận",
+            DialogResult dr = MessageBox.Show("Bạn muốn xóa kho này ?", "Xác nhận",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (dr == DialogResult.OK)
@@ -155,7 +141,6 @@ namespace QLVT
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                //int deletedPosition = current_bds.Find(type, maPhieu);
 
                 string tenKho_backup = ((DataRowView)bdsKho[index])[1].ToString().Trim();
                 string diaChi_backup = ((DataRowView)bdsKho[index])[2].ToString().Trim();
@@ -249,7 +234,7 @@ namespace QLVT
         {
             if (txtMaKho.Text.Trim() == "")
             {
-                MessageBox.Show("Mã kho viên không được thiếu!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Mã kho không được thiếu!", "", MessageBoxButtons.OK);
                 txtMaKho.Focus();
                 return;
             }
@@ -346,13 +331,11 @@ namespace QLVT
                     {
                         try
                         {
-                            //Program.flagCloseFormKho = true; //Bật cờ cho phép tắt Form NV
                             btnThem.Enabled = btnXoa.Enabled = khoGridControl.Enabled = gcInfoKho.Enabled = true;
                             btnReload.Enabled = btnGhi.Enabled = true;
                             btnUndo.Enabled = true;
                             txtMaKho.Enabled = false;
                             this.bdsKho.EndEdit();
-                            //Program.frmChinh.timer1.Enabled = true;
                             this.khoTableAdapter.Connection.ConnectionString = Program.constr;  
                             this.khoTableAdapter.Update(this.dS.Kho);
                             history_kho.Push(GHI_BTN + "#%" + txtMaKho.Text);
@@ -372,9 +355,6 @@ namespace QLVT
 
         private void ComboBox_ChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Trường hợp chưa kịp chọn CN, thuộc tính index ở combobox sẽ thay đổi
-            // "System.Data.DataRowView" sẽ xuất hiện và tất nhiên hệ thống sẽ không thể
-            // nhận diện được tên server "System.Data.DataRowView".
             if (comboBox_ChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView") return;
 
             // Lấy tên server
@@ -480,6 +460,15 @@ namespace QLVT
                 e.Cancel = false;
                 errorProvider1.SetError(txtDiaChi, "");
             }
+        }
+        private void themFunc()
+        {
+            position = bdsKho.Position;
+            txtMaKho.Enabled = true;
+            this.bdsKho.AddNew();
+            txtMaCN.Text = maCN;
+            btnThem.Enabled = btnXoa.Enabled = khoGridControl.Enabled = btnReload.Enabled = false;
+            btnUndo.Enabled = gcInfoKho.Enabled = btnGhi.Enabled = true;
         }
     }
 }

@@ -24,10 +24,8 @@ namespace QLVT
 
         private void FormVatTu_Load(object sender, EventArgs e)
         {
-            // Không kiểm tra khóa ngoại (nếu không sẽ hiện bảng cảnh báo)
             dS.EnforceConstraints = false;
 
-            // TODO: This line of code loads data into the 'dS.Vattu' table. You can move, or remove it, as needed.
             this.vattuTableAdapter.Connection.ConnectionString = Program.constr;
             this.vattuTableAdapter.Fill(this.dS.Vattu);
 
@@ -48,18 +46,7 @@ namespace QLVT
             txtMaVT.Enabled = btnUndo.Enabled = false;
         }
 
-        private void BtnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            position = bdsVatTu.Position;
-            txtMaVT.Enabled = true;
-            this.bdsVatTu.AddNew();
-            btnThem.Enabled = btnXoa.Enabled = gridVatTu.Enabled = btnReload.Enabled = btnUndo.Enabled = false;
-            btnGhi.Enabled = gcInfoVatTu.Enabled = true;
-
-            //Program.flagCloseFormVT = false; //Bật cờ lên để chặn tắt Form đột ngột khi nhập liệu
-            numSLT.Value = 0;
-        }
-
+       
         private void BtnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             String maVT = "";
@@ -127,17 +114,21 @@ namespace QLVT
                 }
             }
 
-            // Unable nút xóa nếu không có vật tư nào
             if (bdsVatTu.Count == 0) btnXoa.Enabled = false;
+        }
+
+        private void BtnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            position = bdsVatTu.Position;
+            txtMaVT.Enabled = true;
+            this.bdsVatTu.AddNew();
+            btnThem.Enabled = btnXoa.Enabled = gridVatTu.Enabled = btnReload.Enabled = btnUndo.Enabled = false;
+            btnGhi.Enabled = gcInfoVatTu.Enabled = true;
+            numSLT.Value = 0;
         }
 
         private void BtnUndo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            /*btnThem.Enabled = btnXoa.Enabled = gridVatTu.Enabled = btnReload.Enabled = true;
-            btnUndo.Enabled = false;
-            //Program.flagCloseFormVT = true; // Undo lại thì cho phép thoát mà ko kiểm tra dữ liệu
-            bdsVatTu.CancelEdit();
-            bdsVatTu.Position = position;*/
 
             if (undolist.Count > 0)
             {
@@ -297,7 +288,6 @@ namespace QLVT
                     {
                         try
                         {
-                            //Program.flagCloseFormVT = true; // Bật cờ cho phép tắt Form NV
                             btnThem.Enabled = btnXoa.Enabled = gridVatTu.Enabled = btnReload.Enabled = btnGhi.Enabled = gcInfoVatTu.Enabled = true;
                             btnUndo.Enabled = true;
                             this.bdsVatTu.EndEdit();

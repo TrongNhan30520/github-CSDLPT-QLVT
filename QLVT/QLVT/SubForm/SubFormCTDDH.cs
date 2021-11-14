@@ -133,7 +133,7 @@ namespace QLVT.SubForm
 
         private void NumSL_Validating(object sender, CancelEventArgs e)
         {
-            if (numSL.Value < 0)
+            if (numSL.Value <= 0)
             {
                 e.Cancel = true;
                 numSL.Focus();
