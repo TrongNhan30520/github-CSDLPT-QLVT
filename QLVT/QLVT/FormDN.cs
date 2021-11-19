@@ -25,8 +25,8 @@ namespace QLVT
         {
             
             if (KetNoi_CSDLGOC() == 0) return;
-            LayDSPM("SELECT * From V_DS_PHANMANH WHERE TENSERVER!='ADMIN//NGUYENTRONGNHAN'");
-            /*LayDSPM("SELECT * From V_DS_PHANMANH WHERE TENSERVER!='NHATNG\\NHATNG3'");*/
+            /*LayDSPM("SELECT * From V_DS_PHANMANH WHERE TENSERVER!='ADMIN//NGUYENTRONGNHAN'");*/
+            LayDSPM("SELECT * From V_DS_PHANMANH WHERE TENSERVER!='NHATNG\\NHATNG3'");
 
             cmbChinhanh.SelectedIndex = 1;
             cmbChinhanh.SelectedIndex = 0;

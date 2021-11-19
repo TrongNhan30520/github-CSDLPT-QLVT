@@ -133,6 +133,7 @@ namespace QLVT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
@@ -176,6 +177,11 @@ namespace QLVT.Properties {
         internal static System.Drawing.Bitmap pngaaa_com_4205924 {
             get {
                 object obj = ResourceManager.GetObject("pngaaa.com-4205924", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap he_thong {
+            get {
+                object obj = ResourceManager.GetObject("he_thong", resourceCulture);
+>>>>>>> ced5313c539df878a58b64a3c03bc1cb4f8707a7
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

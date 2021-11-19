@@ -85,6 +85,8 @@
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -143,6 +145,30 @@
     <Compile Include="frmVatTu.Designer.cs">
       <DependentUpon>frmVatTu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\frmCTSL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmCTSL.Designer.cs">
+      <DependentUpon>frmCTSL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmDSNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmDSNV.Designer.cs">
+      <DependentUpon>frmDSNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmHĐNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmHĐNV.Designer.cs">
+      <DependentUpon>frmHĐNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmTongHopNhapXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmTongHopNhapXuat.Designer.cs">
+      <DependentUpon>frmTongHopNhapXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForm\SubFormCTDDH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +221,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVatTu.resx">
       <DependentUpon>frmVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmCTSL.resx">
+      <DependentUpon>frmCTSL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmDSNV.resx">
+      <DependentUpon>frmDSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmHĐNV.resx">
+      <DependentUpon>frmHĐNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmTongHopNhapXuat.resx">
+      <DependentUpon>frmTongHopNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\SubFormCTDDH.resx">
       <DependentUpon>SubFormCTDDH.cs</DependentUpon>
@@ -249,6 +287,7 @@
     <None Include="Resources\add_phieu_nhap.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\Capture.PNG" />
   </ItemGroup>
   <ItemGroup>
@@ -269,6 +308,11 @@
   <ItemGroup>
     <None Include="Resources\pngaaa.com-4205924.png" />
   </ItemGroup>
+=======
+    <None Include="Resources\he_thong.png" />
+  </ItemGroup>
+  <ItemGroup />
+>>>>>>> ced5313c539df878a58b64a3c03bc1cb4f8707a7
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
