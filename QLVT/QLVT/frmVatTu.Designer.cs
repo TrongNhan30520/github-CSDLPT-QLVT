@@ -163,11 +163,11 @@
             this.gridVatTu.DataSource = this.bdsVatTu;
             this.gridVatTu.Dock = System.Windows.Forms.DockStyle.Top;
             this.gridVatTu.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridVatTu.Location = new System.Drawing.Point(0, 30);
+            this.gridVatTu.Location = new System.Drawing.Point(0, 62);
             this.gridVatTu.MainView = this.gridView1;
-            this.gridVatTu.Margin = new System.Windows.Forms.Padding(4);
+            this.gridVatTu.Margin = new System.Windows.Forms.Padding(4, 166, 4, 4);
             this.gridVatTu.Name = "gridVatTu";
-            this.gridVatTu.Size = new System.Drawing.Size(1077, 455);
+            this.gridVatTu.Size = new System.Drawing.Size(1077, 474);
             this.gridVatTu.TabIndex = 1;
             this.gridVatTu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -235,10 +235,10 @@
             this.gcInfoVatTu.Controls.Add(mAVTLabel);
             this.gcInfoVatTu.Controls.Add(this.txtMaVT);
             this.gcInfoVatTu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcInfoVatTu.Location = new System.Drawing.Point(0, 485);
+            this.gcInfoVatTu.Location = new System.Drawing.Point(0, 536);
             this.gcInfoVatTu.Margin = new System.Windows.Forms.Padding(4);
             this.gcInfoVatTu.Name = "gcInfoVatTu";
-            this.gcInfoVatTu.Size = new System.Drawing.Size(1077, 172);
+            this.gcInfoVatTu.Size = new System.Drawing.Size(1077, 121);
             this.gcInfoVatTu.TabIndex = 2;
             this.gcInfoVatTu.Text = "Thông Tin";
             // 
@@ -334,15 +334,19 @@
             // 
             // bar4
             // 
+            this.bar4.BarAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bar4.BarAppearance.Normal.Options.UseFont = true;
             this.bar4.BarName = "Main menu";
             this.bar4.DockCol = 0;
             this.bar4.DockRow = 0;
             this.bar4.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar4.FloatLocation = new System.Drawing.Point(356, 166);
+            this.bar4.FloatSize = new System.Drawing.Size(356, 166);
             this.bar4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThem, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnGhi, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnUndo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnUndo, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar4.OptionsBar.MultiLine = true;
@@ -355,6 +359,7 @@
             this.btnThem.Id = 0;
             this.btnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThem.ImageOptions.SvgImage")));
             this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(70, 50);
             this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnThem_ItemClick);
             // 
             // btnXoa
@@ -363,6 +368,7 @@
             this.btnXoa.Id = 1;
             this.btnXoa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoa.ImageOptions.SvgImage")));
             this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(70, 50);
             this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnXoa_ItemClick);
             // 
             // btnGhi
@@ -371,6 +377,7 @@
             this.btnGhi.Id = 2;
             this.btnGhi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGhi.ImageOptions.SvgImage")));
             this.btnGhi.Name = "btnGhi";
+            this.btnGhi.Size = new System.Drawing.Size(70, 50);
             this.btnGhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGhi_ItemClick);
             // 
             // btnUndo
@@ -379,6 +386,7 @@
             this.btnUndo.Id = 3;
             this.btnUndo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUndo.ImageOptions.SvgImage")));
             this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(70, 50);
             this.btnUndo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnUndo_ItemClick);
             // 
             // btnReload
@@ -387,6 +395,7 @@
             this.btnReload.Id = 4;
             this.btnReload.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReload.ImageOptions.SvgImage")));
             this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(0, 50);
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnReload_ItemClick);
             // 
             // btnThoat
@@ -395,6 +404,7 @@
             this.btnThoat.Id = 5;
             this.btnThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThoat.ImageOptions.SvgImage")));
             this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(70, 50);
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnThoat_ItemClick);
             // 
             // bar5
@@ -417,7 +427,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1077, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1077, 62);
             // 
             // barDockControlBottom
             // 
@@ -432,19 +442,19 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 62);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 627);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 595);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1077, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1077, 62);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 627);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 595);
             // 
             // bdsCTPX
             // 

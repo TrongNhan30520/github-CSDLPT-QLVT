@@ -79,6 +79,7 @@ namespace QLVT
 
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
+      
             // TODO: This line of code loads data into the 'dS.CTPN' table. You can move, or remove it, as needed.
             this.cTPNTableAdapter.Fill(this.dS.CTPN);
             // TODO: This line of code loads data into the 'DS.Kho' table. You can move, or remove it, as needed.

@@ -159,7 +159,7 @@ namespace QLVT
             this.bar2.DockCol = 0;
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.FloatLocation = new System.Drawing.Point(257, 164);
+            this.bar2.FloatLocation = new System.Drawing.Point(356, 166);
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThem, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -175,8 +175,10 @@ namespace QLVT
             // 
             this.btnThem.Caption = "Thêm";
             this.btnThem.Id = 0;
-            this.btnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThem.ImageOptions.SvgImage")));
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(70, 50);
             this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnThem_ItemClick);
             // 
             // btnXoa
@@ -185,6 +187,7 @@ namespace QLVT
             this.btnXoa.Id = 1;
             this.btnXoa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoa.ImageOptions.SvgImage")));
             this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(70, 50);
             this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnXoa_ItemClick);
             // 
             // btnGhi
@@ -193,6 +196,7 @@ namespace QLVT
             this.btnGhi.Id = 2;
             this.btnGhi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGhi.ImageOptions.SvgImage")));
             this.btnGhi.Name = "btnGhi";
+            this.btnGhi.Size = new System.Drawing.Size(70, 50);
             this.btnGhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGhi_ItemClick);
             // 
             // btnUndo
@@ -201,6 +205,7 @@ namespace QLVT
             this.btnUndo.Id = 3;
             this.btnUndo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUndo.ImageOptions.SvgImage")));
             this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(70, 50);
             this.btnUndo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnUndo_ItemClick);
             // 
             // btnReload
@@ -209,6 +214,7 @@ namespace QLVT
             this.btnReload.Id = 4;
             this.btnReload.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReload.ImageOptions.SvgImage")));
             this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(0, 50);
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnReload_ItemClick);
             // 
             // btnThoat
@@ -217,6 +223,7 @@ namespace QLVT
             this.btnThoat.Id = 5;
             this.btnThoat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThoat.ImageOptions.SvgImage")));
             this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(70, 50);
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnThoat_ItemClick);
             // 
             // bar3
@@ -238,7 +245,7 @@ namespace QLVT
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1077, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1077, 62);
             // 
             // barDockControlBottom
             // 
@@ -253,19 +260,19 @@ namespace QLVT
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 62);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 627);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 595);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1077, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1077, 62);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 627);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 595);
             // 
             // dS
             // 
@@ -301,10 +308,10 @@ namespace QLVT
             this.groupControl1.Controls.Add(this.label_ChiNhanh);
             this.groupControl1.Controls.Add(this.comboBox_ChiNhanh);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 30);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl1.Location = new System.Drawing.Point(0, 62);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 50, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1077, 80);
+            this.groupControl1.Size = new System.Drawing.Size(1077, 84);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Chi Nhánh";
             // 
@@ -335,7 +342,7 @@ namespace QLVT
             this.khoGridControl.DataSource = this.bdsKho;
             this.khoGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.khoGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.khoGridControl.Location = new System.Drawing.Point(0, 110);
+            this.khoGridControl.Location = new System.Drawing.Point(0, 146);
             this.khoGridControl.MainView = this.gridView1;
             this.khoGridControl.Margin = new System.Windows.Forms.Padding(4);
             this.khoGridControl.MenuManager = this.barManager1;
@@ -410,10 +417,10 @@ namespace QLVT
             this.gcInfoKho.Controls.Add(mAKHOLabel);
             this.gcInfoKho.Controls.Add(this.txtMaKho);
             this.gcInfoKho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcInfoKho.Location = new System.Drawing.Point(0, 485);
+            this.gcInfoKho.Location = new System.Drawing.Point(0, 521);
             this.gcInfoKho.Margin = new System.Windows.Forms.Padding(4);
             this.gcInfoKho.Name = "gcInfoKho";
-            this.gcInfoKho.Size = new System.Drawing.Size(1077, 172);
+            this.gcInfoKho.Size = new System.Drawing.Size(1077, 136);
             this.gcInfoKho.TabIndex = 13;
             this.gcInfoKho.Text = "Thông Tin Kho";
             // 
@@ -488,7 +495,7 @@ namespace QLVT
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // FormKho
+            // frmKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -501,7 +508,7 @@ namespace QLVT
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormKho";
+            this.Name = "frmKho";
             this.Text = "Kho";
             this.Load += new System.EventHandler(this.FormKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

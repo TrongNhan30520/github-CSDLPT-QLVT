@@ -351,6 +351,11 @@
             this.numSL.TabIndex = 5;
             this.numSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numSL.ThousandsSeparator = true;
+            this.numSL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtMaVT
             // 

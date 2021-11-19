@@ -273,6 +273,11 @@
             this.numSL.Size = new System.Drawing.Size(211, 24);
             this.numSL.TabIndex = 5;
             this.numSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numSL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numSL.Validating += new System.ComponentModel.CancelEventHandler(this.NumSL_Validating);
             // 
             // txtMaVT
@@ -282,7 +287,6 @@
             this.txtMaVT.Location = new System.Drawing.Point(126, 84);
             this.txtMaVT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaVT.Name = "txtMaVT";
-            this.txtMaVT.ReadOnly = true;
             this.txtMaVT.Size = new System.Drawing.Size(210, 24);
             this.txtMaVT.TabIndex = 3;
             // 

@@ -404,7 +404,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1504);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1090);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1128, 20);
             // 
@@ -414,7 +414,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1474);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1060);
             // 
             // barDockControlRight
             // 
@@ -422,7 +422,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1128, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 1474);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 1060);
             // 
             // groupControl1
             // 
@@ -431,7 +431,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 30);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1128, 65);
+            this.groupControl1.Size = new System.Drawing.Size(1128, 70);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Chi Nhánh";
             // 
@@ -450,7 +450,7 @@
             // 
             this.comboBox_ChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ChiNhanh.FormattingEnabled = true;
-            this.comboBox_ChiNhanh.Location = new System.Drawing.Point(258, 34);
+            this.comboBox_ChiNhanh.Location = new System.Drawing.Point(234, 36);
             this.comboBox_ChiNhanh.Name = "comboBox_ChiNhanh";
             this.comboBox_ChiNhanh.Size = new System.Drawing.Size(269, 24);
             this.comboBox_ChiNhanh.TabIndex = 0;
@@ -493,11 +493,11 @@
             // 
             this.gridDDH.DataSource = this.bdsDH;
             this.gridDDH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridDDH.Location = new System.Drawing.Point(0, 95);
+            this.gridDDH.Location = new System.Drawing.Point(0, 100);
             this.gridDDH.MainView = this.gvDDH;
             this.gridDDH.MenuManager = this.barManager1;
             this.gridDDH.Name = "gridDDH";
-            this.gridDDH.Size = new System.Drawing.Size(1128, 245);
+            this.gridDDH.Size = new System.Drawing.Size(1128, 140);
             this.gridDDH.TabIndex = 6;
             this.gridDDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDDH});
@@ -589,11 +589,11 @@
             // 
             this.gridPX.DataSource = this.bdsPX;
             this.gridPX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridPX.Location = new System.Drawing.Point(0, 340);
+            this.gridPX.Location = new System.Drawing.Point(0, 240);
             this.gridPX.MainView = this.gvPX;
             this.gridPX.MenuManager = this.barManager1;
             this.gridPX.Name = "gridPX";
-            this.gridPX.Size = new System.Drawing.Size(1128, 245);
+            this.gridPX.Size = new System.Drawing.Size(1128, 200);
             this.gridPX.TabIndex = 11;
             this.gridPX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPX});
@@ -712,9 +712,9 @@
             this.gcDDH.Controls.Add(this.gridCTDDH);
             this.gcDDH.Controls.Add(this.gbInfoDDH);
             this.gcDDH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcDDH.Location = new System.Drawing.Point(0, 585);
+            this.gcDDH.Location = new System.Drawing.Point(0, 440);
             this.gcDDH.Name = "gcDDH";
-            this.gcDDH.Size = new System.Drawing.Size(1128, 288);
+            this.gcDDH.Size = new System.Drawing.Size(1128, 207);
             this.gcDDH.TabIndex = 23;
             this.gcDDH.Text = "Đặt Hàng";
             // 
@@ -727,7 +727,7 @@
             this.gridCTDDH.MainView = this.gvCTDDH;
             this.gridCTDDH.MenuManager = this.barManager1;
             this.gridCTDDH.Name = "gridCTDDH";
-            this.gridCTDDH.Size = new System.Drawing.Size(548, 258);
+            this.gridCTDDH.Size = new System.Drawing.Size(548, 177);
             this.gridCTDDH.TabIndex = 1;
             this.gridCTDDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCTDDH});
@@ -803,7 +803,7 @@
             this.gbInfoDDH.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInfoDDH.Location = new System.Drawing.Point(2, 28);
             this.gbInfoDDH.Name = "gbInfoDDH";
-            this.gbInfoDDH.Size = new System.Drawing.Size(576, 258);
+            this.gbInfoDDH.Size = new System.Drawing.Size(576, 177);
             this.gbInfoDDH.TabIndex = 0;
             this.gbInfoDDH.TabStop = false;
             this.gbInfoDDH.Text = "Thông Tin";
@@ -854,9 +854,9 @@
             this.gcPX.Controls.Add(this.gridCTPX);
             this.gcPX.Controls.Add(this.gbInfoPX);
             this.gcPX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcPX.Location = new System.Drawing.Point(0, 873);
+            this.gcPX.Location = new System.Drawing.Point(0, 647);
             this.gcPX.Name = "gcPX";
-            this.gcPX.Size = new System.Drawing.Size(1128, 298);
+            this.gcPX.Size = new System.Drawing.Size(1128, 253);
             this.gcPX.TabIndex = 31;
             this.gcPX.Text = "Phiếu Xuất";
             this.gcPX.Visible = false;
@@ -870,7 +870,7 @@
             this.gridCTPX.MainView = this.gvCTPX;
             this.gridCTPX.MenuManager = this.barManager1;
             this.gridCTPX.Name = "gridCTPX";
-            this.gridCTPX.Size = new System.Drawing.Size(548, 268);
+            this.gridCTPX.Size = new System.Drawing.Size(548, 223);
             this.gridCTPX.TabIndex = 1;
             this.gridCTPX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCTPX});
@@ -945,7 +945,7 @@
             this.gbInfoPX.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInfoPX.Location = new System.Drawing.Point(2, 28);
             this.gbInfoPX.Name = "gbInfoPX";
-            this.gbInfoPX.Size = new System.Drawing.Size(576, 268);
+            this.gbInfoPX.Size = new System.Drawing.Size(576, 223);
             this.gbInfoPX.TabIndex = 0;
             this.gbInfoPX.TabStop = false;
             this.gbInfoPX.Text = "Thông Tin";
@@ -995,9 +995,9 @@
             // 
             this.gcPN.Controls.Add(this.splitContainer1);
             this.gcPN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcPN.Location = new System.Drawing.Point(0, 1171);
+            this.gcPN.Location = new System.Drawing.Point(0, 900);
             this.gcPN.Name = "gcPN";
-            this.gcPN.Size = new System.Drawing.Size(1128, 333);
+            this.gcPN.Size = new System.Drawing.Size(1128, 190);
             this.gcPN.TabIndex = 36;
             this.gcPN.Text = "Phiếu Nhập";
             this.gcPN.Visible = false;
@@ -1015,7 +1015,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridCTPN);
-            this.splitContainer1.Size = new System.Drawing.Size(1124, 303);
+            this.splitContainer1.Size = new System.Drawing.Size(1124, 160);
             this.splitContainer1.SplitterDistance = 604;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -1032,7 +1032,7 @@
             this.gridPN.MainView = this.gvPN;
             this.gridPN.MenuManager = this.barManager1;
             this.gridPN.Name = "gridPN";
-            this.gridPN.Size = new System.Drawing.Size(604, 303);
+            this.gridPN.Size = new System.Drawing.Size(604, 160);
             this.gridPN.TabIndex = 1;
             this.gridPN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPN});
@@ -1123,7 +1123,7 @@
             this.gridCTPN.MainView = this.gridView5;
             this.gridCTPN.MenuManager = this.barManager1;
             this.gridCTPN.Name = "gridCTPN";
-            this.gridCTPN.Size = new System.Drawing.Size(516, 303);
+            this.gridCTPN.Size = new System.Drawing.Size(516, 160);
             this.gridCTPN.TabIndex = 2;
             this.gridCTPN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -1301,7 +1301,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1149, 749);
+            this.ClientSize = new System.Drawing.Size(1149, 1055);
             this.Controls.Add(this.gcPN);
             this.Controls.Add(this.gcPX);
             this.Controls.Add(this.gcDDH);

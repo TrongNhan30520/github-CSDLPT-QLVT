@@ -284,6 +284,11 @@
             this.numSL.Size = new System.Drawing.Size(211, 24);
             this.numSL.TabIndex = 14;
             this.numSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numSL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numSL.Validating += new System.ComponentModel.CancelEventHandler(this.NumSL_Validating);
             // 
             // txtMaVT

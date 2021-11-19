@@ -408,7 +408,7 @@ namespace QLVT
             // 
             // bdsNV
             // 
-            this.bdsNV.AllowNew = false;
+            this.bdsNV.AllowNew = true;
             this.bdsNV.DataMember = "NhanVien";
             this.bdsNV.DataSource = this.dS;
             this.bdsNV.CurrentChanged += new System.EventHandler(this.bdsNV_CurrentChanged);

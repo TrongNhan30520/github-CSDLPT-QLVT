@@ -256,7 +256,7 @@ namespace QLVT
                 // == Query tìm MAKHO ==
                 String makho = txtMaKho.Text.Trim();
                 Program.conn = new SqlConnection(Program.constr);
-                Program.conn.Open();
+                Program.conn.Open(); 
                 String query_MAKHO = "DECLARE @return_value int " +
                                     "EXEC @return_value = [dbo].[SP_CHECKID_TRACUU] " +
                                     "@p1, @p2 " +

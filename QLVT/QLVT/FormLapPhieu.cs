@@ -839,6 +839,30 @@ namespace QLVT
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            //////
+            string maPN = this.gvPN.GetRowCellValue(bdsPN.Position, "MAPN").ToString();
+            try
+            {
+                this.bdsPN.EndEdit();
+                this.phieuNhapTableAdapter.Update(this.dS.PhieuNhap);
+                gridDDH.Enabled = true;
+                cmsPN.Items[1].Enabled = cmsPN.Items[3].Enabled = true;
+
+                string maSoDDH = this.gvPN.GetRowCellValue(bdsPN.Position, "MasoDDH").ToString().Trim();
+                pushHistory(GHIPN_BTN + "#%" + maSoDDH + "#%" + maPN);
+            }
+            catch (Exception ex)
+            {
+                // Khi Update database lỗi thì xóa record vừa thêm trong bds
+                bdsPN.RemoveCurrent();
+                gridDDH.Enabled = true;
+                cmsPN.Items[0].Enabled = true;
+                cmsPN.Items[1].Enabled = cmsPN.Items[2].Enabled = cmsPN.Items[3].Enabled = false;
+                MessageBox.Show("Thất bại. Vui lòng kiểm tra lại!\n" + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            /////
             Program.subFormCTPN = new SubFormCTPN();
             Program.subFormCTPN.Show();
 
