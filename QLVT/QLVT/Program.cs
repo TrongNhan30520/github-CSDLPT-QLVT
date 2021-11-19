@@ -18,8 +18,8 @@ namespace QLVT
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String constr;
-        public static String constr_publisher = "Data Source=ADMIN\\NGUYENTRONGNHAN;Initial Catalog=QLVT;Integrated Security=True";
-        /*public static String constr_publisher = "Data Source=NHATNG; Initial Catalog=QLVT_DATHANG ; Integrated Security=True";*/
+       /* public static String constr_publisher = "Data Source=ADMIN\\NGUYENTRONGNHAN;Initial Catalog=QLVT;Integrated Security=True";*/
+        public static String constr_publisher = "Data Source=NHATNG; Initial Catalog=QLVT_DATHANG ; Integrated Security=True";
 
         public static SqlDataReader myReader;
         public static String servername ="";
@@ -27,9 +27,9 @@ namespace QLVT
         public static String mlogin ="";
         public static String password ="";
 
-        public static String database = "QLVT";
+        public static String database = "QLVT_DATHANG";
         public static String remotelogin = "HTKN";
-        public static String remotepassword = "12345";
+        public static String remotepassword = "123";
         public static String mloginDN ="";
         public static String passwordDN ="";
         public static String mGroup ="";

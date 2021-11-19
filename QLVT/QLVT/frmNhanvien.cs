@@ -24,6 +24,7 @@ namespace QLVT
             InitializeComponent();
 
             WindowState = FormWindowState.Maximized;
+
             
             
             
@@ -76,18 +77,12 @@ namespace QLVT
                 return 0;
             }
         }
-
+        [System.ComponentModel.Browsable(false)]
+        public int FirstDisplayedScrollingRowIndex { get; set; }
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dS.CTPN' table. You can move, or remove it, as needed.
-            this.cTPNTableAdapter.Fill(this.dS.CTPN);
-            // TODO: This line of code loads data into the 'DS.Kho' table. You can move, or remove it, as needed.
-            this.khoTableAdapter.Fill(this.dS.Kho);
-            // TODO: This line of code loads data into the 'DS.ChiNhanh' table. You can move, or remove it, as needed.
-            this.chiNhanhTableAdapter.Fill(this.dS.ChiNhanh);
-            // TODO: This line of code loads data into the 'DS.CTDDH' table. You can move, or remove it, as needed.
-            this.cTDDHTableAdapter.Fill(this.dS.CTDDH);
 
+            
             this.nhanVienTableAdapter.Connection.ConnectionString = Program.constr;
             this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
 
@@ -100,7 +95,16 @@ namespace QLVT
             this.phieuNhapTableAdapter.Connection.ConnectionString = Program.constr;
             this.phieuNhapTableAdapter.Fill(this.dS.PhieuNhap);
 
+           /* // TODO: This line of code loads data into the 'dS.CTPN' table. You can move, or remove it, as needed.
+            this.cTPNTableAdapter.Fill(this.dS.CTPN);
+            // TODO: This line of code loads data into the 'DS.Kho' table. You can move, or remove it, as needed.
+            this.khoTableAdapter.Fill(this.dS.Kho);
+            // TODO: This line of code loads data into the 'DS.ChiNhanh' table. You can move, or remove it, as needed.
+            this.chiNhanhTableAdapter.Fill(this.dS.ChiNhanh);
+            // TODO: This line of code loads data into the 'DS.CTDDH' table. You can move, or remove it, as needed.
+            this.cTDDHTableAdapter.Fill(this.dS.CTDDH);*/
             macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
+            
             cmbChiNhanh.DataSource = Program.bds_dspm;
             cmbChiNhanh.DisplayMember = "TENCN";
             cmbChiNhanh.ValueMember = "TENSERVER"; 
@@ -115,7 +119,9 @@ namespace QLVT
                 cmbChiNhanh.Enabled = false;
                 btnThem.Enabled = btnXoa.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled =btnHieuChinh.Enabled= btnTaiLai.Enabled=btnThoat.Enabled= true;
             }
-            
+
+
+           
 
 
 
@@ -123,7 +129,7 @@ namespace QLVT
 
         private void gcNV_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void nhanVienBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
@@ -179,12 +185,12 @@ namespace QLVT
             vitri = bdsNV.Position;
             grTTNV.Enabled = true;
             bdsNV.AddNew();
+            
             txtMACN.Text = macn;
             DateNV.EditValue = "";
-
             btnThem.Enabled = btnXoa.Enabled =btnHieuChinh.Enabled= btnTaiLai.Enabled = btnThoat.Enabled =btnCCN.Enabled=false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
-            gcNV.Enabled = false;
+            gcNV.Enabled = false; 
         }
 
         private void btnPhucHoi_ItemClick(object sender, ItemClickEventArgs e)
@@ -207,20 +213,24 @@ namespace QLVT
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@MANV", maNV));
                     SqlDataReader myReader = null;
-
                     try
                     {
                         myReader = cmd.ExecuteReader();
-                    }
+                    }                  
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
                     MessageBox.Show("Chuyển nhân viên về thành công ! ", "", MessageBoxButtons.OK);
-
                     this.nhanVienTableAdapter.Update(this.dS.NhanVien);
+                    this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
+                    bdsNV.Position = vitri;
+                    btnThem.Enabled = btnXoa.Enabled = btnTaiLai.Enabled = btnThoat.Enabled = btnHieuChinh.Enabled = btnCCN.Enabled = true;
+                    btnGhi.Enabled = btnPhucHoi.Enabled = false;
                     undo = 0;
-                }    
+
+
+                }
             }    
         }
 
@@ -237,7 +247,9 @@ namespace QLVT
         {
             try
             {
+
                 this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
+               
             }
             catch (Exception ex)
             {
@@ -437,8 +449,13 @@ namespace QLVT
 
                 this.phieuNhapTableAdapter.Connection.ConnectionString = Program.constr;
                 this.phieuNhapTableAdapter.Fill(this.dS.PhieuNhap);
-                macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
+                if (bdsNV.Count > 0)
+                {
+                    macn = ((DataRowView)bdsNV[0])["MACN"].ToString();
 
+                }
+                else
+                    return;
             }
         }
 
@@ -477,17 +494,27 @@ namespace QLVT
                          
                     try
                     {
+                        vitri = bdsNV.Position;
                         myReader = cmd.ExecuteReader();
+                        this.nhanVienTableAdapter.Update(this.dS.NhanVien);
+                        
+
+                        MessageBox.Show("Chuyển chi nhánh thành công ! ", "", MessageBoxButtons.OK);
+                        undo = 1;
+                      btnGhi.Enabled= btnThem.Enabled = btnXoa.Enabled = btnThoat.Enabled = btnHieuChinh.Enabled = btnCCN.Enabled = false;
+                        btnPhucHoi.Enabled= btnTaiLai.Enabled=true;
+
+
+
+
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
+                        return;
                     }
-                    MessageBox.Show("Chuyển chi nhánh thành công ! ", "", MessageBoxButtons.OK);
-                    
-                    this.nhanVienTableAdapter.Update(this.dS.NhanVien);
-                    undo = 1;
-                    btnPhucHoi.Enabled = true;
+                    this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
+                    bdsNV.Position= vitri ;
                 }
             }    
         }

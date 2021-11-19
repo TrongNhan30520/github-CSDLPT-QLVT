@@ -124,5 +124,93 @@ namespace QLVT
             }
         }
 
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BtnDSNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Report.frmDSNV));
+            if (form != null) form.Activate();
+            else
+            {
+                Report.frmDSNV f = new Report.frmDSNV();
+                f.LbChucNang.Text = "Danh Sách Nhân Viên";
+                Program.frmChinh.Enabled = false;
+                f.ShowDialog();
+
+
+            }
+
+        }
+
+        private void BtnRPVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            Form form = this.CheckExists(typeof(Report.frmDSNV));
+            if (form != null) form.Activate();
+            else
+            {
+                Report.frmDSNV f = new Report.frmDSNV();
+                f.LbChucNang.Location = new Point(109, 30);
+                f.LbChucNang.ForeColor = Color.Yellow;
+                f.LbChucNang.Text = "Danh Sách Vật Tư";
+                Program.frmChinh.Enabled = false;
+                f.ShowDialog();
+            }
+        }
+
+        private void btnTHNhapXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Report.frmTongHopNhapXuat));
+            if (form != null) form.Activate();
+            else
+            {
+                Report.frmTongHopNhapXuat f = new Report.frmTongHopNhapXuat();
+                Program.frmChinh.Enabled = false;
+                f.ShowDialog();
+            }
+        }
+
+        private void btnDonChuaNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Report.frmDSNV));
+            if (form != null) form.Activate();
+            else
+            {
+                Report.frmDSNV f = new Report.frmDSNV();
+                f.LbChucNang.ForeColor = Color.Cyan;
+                f.LbChucNang.Font=new Font("Times New Roman", 17, FontStyle.Bold);
+                f.LbChucNang.Location = new Point(30, 33);
+                f.LbChucNang.Text = "Danh Sách Đơn đặt hàng chưa có Phiếu xuất";
+                Program.frmChinh.Enabled = false;
+                f.ShowDialog();
+            }
+        }
+
+        private void btnChiTietNX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Report.frmCTSL));
+            if (form != null) form.Activate();
+            else
+            {
+                Report.frmCTSL f = new Report.frmCTSL();
+                Program.frmChinh.Enabled = false;
+                f.ShowDialog();
+            }
+        }
+
+        private void btnHĐNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Report.frmHĐNV));
+            if (form != null) form.Activate();
+            else
+            {
+                Report.frmHĐNV f = new Report.frmHĐNV();
+                Program.frmChinh.Enabled = false;
+                f.ShowDialog();
+            }
+        }
     }
 }

@@ -79,7 +79,7 @@
             // 
             this.khoGridControl.DataSource = this.bdsKho;
             this.khoGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.khoGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.khoGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.khoGridControl.Location = new System.Drawing.Point(0, 0);
             this.khoGridControl.MainView = this.gridView1;
             this.khoGridControl.Name = "khoGridControl";
@@ -135,9 +135,9 @@
             // 
             // btnKho
             // 
-            this.btnKho.Location = new System.Drawing.Point(348, 242);
+            this.btnKho.Location = new System.Drawing.Point(362, 257);
             this.btnKho.Name = "btnKho";
-            this.btnKho.Size = new System.Drawing.Size(105, 23);
+            this.btnKho.Size = new System.Drawing.Size(91, 36);
             this.btnKho.TabIndex = 2;
             this.btnKho.Text = "Chọn";
             this.btnKho.UseVisualStyleBackColor = true;
@@ -146,9 +146,9 @@
             // SubFormKho
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 271);
+            this.ClientSize = new System.Drawing.Size(465, 305);
             this.Controls.Add(this.btnKho);
             this.Controls.Add(this.khoGridControl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

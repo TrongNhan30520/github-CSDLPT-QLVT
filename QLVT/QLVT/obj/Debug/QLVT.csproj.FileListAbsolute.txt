@@ -134,7 +134,6 @@ C:\Users\NHATNGUYEN\Source\Repos\github-CSDLPT-QLVT\QLVT\QLVT\bin\Debug\ru\DevEx
 C:\Users\NHATNGUYEN\Source\Repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.csproj.AssemblyReference.cache
 C:\Users\NHATNGUYEN\Source\Repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.FormMain.resources
 C:\Users\NHATNGUYEN\Source\Repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.frmKho.resources
-C:\Users\NHATNGUYEN\Source\Repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.frmLapPhieu.resources
 C:\Users\NHATNGUYEN\Source\Repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.frmNhanvien.resources
 C:\Users\NHATNGUYEN\Source\Repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.Properties.Resources.resources
 C:\Users\NHATNGUYEN\Source\Repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.FormDN.resources
@@ -296,3 +295,8 @@ C:\Users\Admin\Desktop\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.exe
 C:\Users\Admin\Desktop\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.pdb
 C:\Users\Admin\Desktop\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.SubForm.SubFormCTPN.resources
 C:\Users\Admin\Desktop\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.SubForm.SubFormCTPX.resources
+C:\Users\NHATNGUYEN\source\repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.FormLapPhieu.resources
+C:\Users\NHATNGUYEN\source\repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.SubForm.SubFormCTDDH.resources
+C:\Users\NHATNGUYEN\source\repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.SubForm.SubFormCTPN.resources
+C:\Users\NHATNGUYEN\source\repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.SubForm.SubFormCTPX.resources
+C:\Users\NHATNGUYEN\source\repos\github-CSDLPT-QLVT\QLVT\QLVT\obj\Debug\QLVT.SubForm.SubFormKho.resources
